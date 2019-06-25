@@ -1,0 +1,2293 @@
+---
+title: "ET_PIP - data and analyses"
+subtitle: "Supplementary Materials for doi XXX XXX XXX"
+author: "Gregor Kachel, Richard Moore, Robert Hepach & Michael Tomasello"
+output: 
+  bookdown::html_document2:
+    toc: yes
+    toc_float: true
+    fig_caption: yes
+    number_sections: false
+    code_folding: hide
+bibliography: library.bib
+csl: apa.csl
+header-includes:
+  \usepackage{caption}
+  \renewcommand{\thetable}{S\arabic{table}} 
+  \renewcommand{\thefigure}{S\arabic{figure}}
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+
+```{r load_packages, include = FALSE}
+# library(tidyverse)
+# library(ggthemes)
+# library(lme4)
+# library(exactRankTests)
+# # library(coin)
+# library(ggpubr)
+# library(Hmisc)
+
+# library(langcog)
+# langcog package is installed by running
+# install.packages("devtools")
+# devtools::install_github("langcog/langcog")
+# library(exactRankTests)
+
+
+
+```
+# Overview
+
+In this document we provide the data and statistical analyses presented in Kachel, Moore, Hepach & Tomasello (subm.). Each analysis (i.e. comparison of choice behavior, imitation rates, looking time analyses) is presented in a separate subsection. The respective analysis scripts (press "code" to unfold) are presented alongside with the relevant paragraphs from the manuscript summarizing analysis and results. For a discussion of the findings, please see the manuscript itself. 
+
+Scripts are prepared in such a way that the data are loaded from the same folder as this document is in. It is best to copy/download the entire folder when working with this script. For the convenience of the reader, data and required packages are loaded and processed for each analysis repeatedly in each subsection, allowing for the reader run the analysis in that section without searching the rest of the document. The descriptive analyses of demographic and quesionnaire data presented in the manuscript were computed in Excel and are omitted here for brevity. Scripts for reproducing the plots are attached at the end. 
+
+Stimuli, data and analysis scripts are available online at [`https://github.com/GregorKachel/ET_PIP_supplements`](https://github.com/GregorKachel/ET_PIP_supplements). For all analyses, we used R [@R-base]. 
+
+# Analyses and Results 
+
+## Choice Behavior
+
+For the analysis of children’s choice behavior, choices were recoded as correct or incorrect depending on whether they were compliant with the pointing gesture. We used Generalized Linear Mixed Models (GLMM, Baayen, 2008; Bates et al., 2015) with binomial error structure and logit link function to compare children’s performance between conditions. Since we were primarily interested in the effect of the experimental manipulation, condition (peer, adult) was included as a fixed effect. Furthermore, we added age (two-year-olds, three-year-olds) as a fixed effect and added an interaction of age and condition. Sex and trial number were entered as further fixed effects to be controlled for. An interaction of condition and sex was added. Prior to the analysis, trial number was z-transformed to a mean of zero and a standard deviation of one to ensure model convergence. Dyad and subject were included as random effects. Furthermore, trial number was added as a random slope within dyad and subject as well as a correlation of the slopes and random intercepts. To establish the significance of the full model (Forstmeier & Schielzeth, 2011), we used a likelihood ratio test (Dobson, 2002), comparing its deviance with that of a null model that comprised all factors of the full model described above except for condition and the interaction of sex and condition. All GLMM analyses reported below share this full and null model structure. Model stability was evaluated by assessing the estimates of all fixed and random effects. In all of the models reported below, residuals were found to be normally distributed unless indicated otherwise. For additional support of the analysis, data were also submitted to standard ANOVAs and non-parametric tests. All analyses were run R [@R-base].
+
+
+### GLMM choice data
+```{r choice full null, echo = T}
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials 
+choice.data<-x.data[x.data$valid=="in",]
+
+# ztransform trial
+choice.data$trial<-as.numeric(as.character(choice.data$trial))
+choice.data$z.trial<-as.vector(scale(choice.data$trial))
+
+# sex into m f
+choice.data$mfsex<-"m"
+choice.data$mfsex[choice.data$sex==0]<-"f"
+choice.data$mfsex<-as.factor(choice.data$mfsex)
+
+# dummy code age
+choice.data$dumage=as.numeric(choice.data$age==levels(choice.data$age)[2])
+
+# check data: n=96, only valid data 840 observations 03.11.2016
+# str(choice.data)
+
+# #### test for complete separation
+# source("./diagnostic_fcns.r")
+# # make object 
+# rancheck<-fe.re.tab(fe.model="corr~cond*age+z.trial+mfsex", re=c("id", "video"), data=choice.data)
+# # sow summary
+# rancheck$summary
+# ### checking for complete separation 
+# table(choice.data$corr, choice.data$cond)
+# table(choice.data$corr, choice.data$cond, choice.data$age)
+# table(choice.data$corr, choice.data$sex)
+
+### Define Model
+# packages
+library(lme4)
+#library(car)
+
+# optimizer
+glmer.control<-glmerControl(optCtrl=list(maxfun=1000000), optimizer = "bobyqa")
+
+### Full Model 
+allres<-glmer(corr~cond*age+z.trial+mfsex+(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video), data=choice.data, family=binomial, control=glmer.control)
+
+### Null Model
+allres.null<-glmer(corr~z.trial+mfsex+(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video), data=choice.data, family=binomial, control=glmer.control)
+
+### FULL NULL COMPARISON
+resfullnull<-anova(allres.null, allres, test="Chisq")
+
+# Models:
+# allres.null: corr ~ z.trial + mfsex + (1 | id) + (0 + z.trial | id) + (1 | 
+# allres.null:     video) + (0 + z.trial | video) + (0 + dumage | video)
+# allres: corr ~ cond * age + z.trial + mfsex + (1 | id) + (0 + z.trial | 
+# allres:     id) + (1 | video) + (0 + z.trial | video) + (0 + dumage | 
+# allres:     video)
+#             Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)    
+# allres.null  8 837.66 875.52 -410.83   821.66                             
+# allres      11 818.80 870.87 -398.40   796.80 24.858      3  1.653e-05 ***
+
+
+resdrop<-drop1(scope=~cond:age, object=allres, test="Chisq")
+# Single term deletions
+# 
+# Model:
+# corr ~ cond * age + z.trial + mfsex + (1 | id) + (0 + z.trial | 
+#     id) + (1 | video) + (0 + z.trial | video) + (0 + dumage | 
+#     video)
+#          Df    AIC     LRT Pr(Chi)
+# <none>      818.80                
+# cond:age  1 816.96 0.16569   0.684
+
+res_interaction<-summary(allres)
+# Fixed effects:
+#                 Estimate Std. Error z value Pr(>|z|)    
+# (Intercept)      0.93336    0.38061   2.452 0.014195 *  
+# condpeer        -0.92269    0.46118  -2.001 0.045425 *  
+# ageM36           1.95540    0.54388   3.595 0.000324 ***
+# z.trial          0.06956    0.11082   0.628 0.530190    
+# mfsexm          -0.01781    0.37883  -0.047 0.962508    
+# condpeer:ageM36  0.29847    0.72444   0.412 0.680340  
+
+
+### reduced model (dropping the interaction)
+allresred<-glmer(corr~cond+age+z.trial+mfsex+(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video), data=choice.data, family=binomial, control=glmer.control)
+
+resdropred<-drop1(allresred, test="Chisq")
+
+# get the summary of the FINAL results
+resultsresred<-summary(allresred)
+
+# Fixed effects:
+#             Estimate Std. Error z value Pr(>|z|)    
+# (Intercept)  0.88370    0.35879   2.463   0.0138 *  
+# condpeer    -0.81669    0.37822  -2.159   0.0308 *  
+# ageM36       2.12030    0.38247   5.544 2.96e-08 ***
+# z.trial      0.06934    0.11083   0.626   0.5315    
+# mfsexm      -0.02535    0.37693  -0.067   0.9464   
+
+```
+
+The full model comprising age, condition and the interaction of age and condition was significantly better at explaining variation in the data than a null model comprising only sex, trial number and the random effects structure (χ2 = 24.86, Df = 3, p < 0.001). As the interaction of age and condition was not significant (Estimate = 0.3, SE = 0.72; z = 0.41; p = 0.68), it was dropped from the analysis.  
+
+The final model contained age and condition as main effects and yielded a significant effect of condition (Estimate = -0.82, SE = 0.38; z = -2.16; p = 0.03) and of age (Estimate = 2.12, SE = 0.38; z = 5.54; p < 0.001). 
+
+
+### ANOVA choice data
+```{r choice anova, echo = T}
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get props
+props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond, choice.data$age), mean)
+colnames(props)<-c("id","condition","age","prop")
+
+choice.agg<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond, choice.data$age), mean)
+colnames(choice.agg)<-c("id","condition","age","prop")
+
+resanova<-anova(lm(prop ~ condition*age, data=choice.agg))
+
+# Analysis of Variance Table
+
+# Response: prop
+              # Df Sum Sq Mean Sq F value    Pr(>F)    
+# condition      1 0.3122 0.31216  5.4320   0.02196 *  
+# age            1 2.0077 2.00767 34.9365 5.713e-08 ***
+# condition:age  1 0.0821 0.08211  1.4288   0.23503    
+# Residuals     92 5.2869 0.05747                      
+# ---
+# Signif. codes:  0 â***â 0.001 â**â 0.01 â*â 0.05 â.â 0.1 â â 1
+
+
+```
+Analyzing the same data with an ANOVA, yielded a significant effect of condition (F(1, 92) = 5.43, p = 0.02) and age (F(1, 92) = 34.93, p < 0.001). Again, the interaction was not significant (F(1,92) = 1.43, p = 0.24).  
+
+
+### Mann-Whitney tests choice data
+
+```{r choice u tests, echo = T}
+
+
+### Two-year-olds across conditions ###
+#####################
+# load package
+library(exactRankTests)
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in" & x.data$age=="M24",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get indicidual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+
+res24m<-wilcox.exact(ind.props$prop[ind.props$condition=="adul"], ind.props$prop[ind.props$condition=="peer"], exact=T, paired=F)
+
+# data:  ind.props$prop[ind.props$condition == "adul"] and ind.props$prop[ind.props$condition == "peer"]
+# W = 385.5, p-value = 0.04331
+# alternative hypothesis: true mu is not equal to 0
+
+### Three-year-olds across conditions ###
+#########################################
+# load package
+library(exactRankTests)
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in" & x.data$age=="M36",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get indicidual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+
+# Test
+res36M<-wilcox.exact(ind.props$prop[ind.props$condition=="adul"], ind.props$prop[ind.props$condition=="peer"], exact=T, paired=F)
+
+# Exact Wilcoxon rank sum test
+# 
+# data:  ind.props$prop[ind.props$condition == "adul"] and ind.props$prop[ind.props$condition == "peer"]
+# W = 335.5, p-value = 0.3009
+# alternative hypothesis: true mu is not equal to 0
+
+
+### Peer Condition Across Age-groups ###
+##################################
+# load package
+library(exactRankTests)
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials in peer condition
+choice.data<-x.data[x.data$valid=="in" & x.data$cond=="peer",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get indicidual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$age), mean)
+colnames(ind.props)<-c("ind","age","prop")
+
+### Wilcoxon
+respeer<-wilcox.test(ind.props$prop[ind.props$age=="M24"], ind.props$prop[ind.props$age=="M36"], exact=T)
+
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  ind.props$prop[ind.props$age == "M24"] and ind.props$prop[ind.props$age == "M36"]
+# W = 92.5, p-value = 4.684e-05
+# alternative hypothesis: true location shift is not equal to 0
+
+
+### Adult Condition Across Age-groups ###
+##################################
+# load package
+library(exactRankTests)
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in" & x.data$cond=="adul",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get individual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$age), mean)
+colnames(ind.props)<-c("ind","age","prop")
+
+### Wilcoxon
+resadul<-wilcox.test(ind.props$prop[ind.props$age=="M24"], ind.props$prop[ind.props$age=="M36"], exact=T, paired=F)
+
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  ind.props$prop[ind.props$age == "M24"] and ind.props$prop[ind.props$age == "M36"]
+# W = 126, p-value = 0.0006358
+# alternative hypothesis: true location shift is not equal to 0
+
+
+```
+
+The data were explored further with Mann-Whitney U tests illustrating that the effect of condition appears to be mostly driven by younger age group. A Mann-Whitney U test indicated a significant effect of condition in the two-year-olds (U = 385.5, p = 0.043), we found no effect in the older age group (U = 335.5, p = 0.3). Additionally, three-year-olds were significantly better than the two-year-olds in both the adult condition (U = 126, p < 0.001) and the peer condition (U = 92.5, p < 0.001). In the absence of a significant interaction of choice and condition, the general finding is that both two- and three-year-olds trust pointing gestures of adult partners more. An examination of the plots and additional analyses illustrate that the effect is more pronounced in the two-year-olds (see figure 3). 
+
+
+### Test against chance - overall
+```{r choice against chance, echo = T}
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+### M24 Peer
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in peer condition with age 24Months
+peer.data<-x.data[x.data$valid=="in" & x.data$cond=="peer" & x.data$age=="M24",]       
+# drop levels and check exclusion
+peer.data<-droplevels(peer.data)
+# aggregate
+ind.props<-aggregate(peer.data$corr, list(peer.data$id, peer.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+###t test for peer condition 
+m24peerchance<-t.test(ind.props$prop[ind.props$condition=="peer"], alternative="two.sided", mu=1/3)
+
+# 	One Sample t-test
+# 
+# data:  ind.props$prop[ind.props$condition == "peer"]
+# t = 2.6387, df = 23, p-value = 0.01468
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+#  0.3684798 0.6235837
+# sample estimates:
+# mean of x 
+# 0.4960317 
+
+
+
+### M36 Peer
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in peer condition with age 24Months
+peer.data<-x.data[x.data$valid=="in" & x.data$cond=="peer" & x.data$age=="M36",]       
+# drop levels and check exclusion
+peer.data<-droplevels(peer.data)
+# aggregate
+ind.props<-aggregate(peer.data$corr, list(peer.data$id, peer.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+###t test for peer condition 
+m36peer<-t.test(ind.props$prop[ind.props$condition=="peer"], alternative="two.sided", mu=1/3)
+	# One Sample t-test
+
+# data:  ind.props$prop[ind.props$condition == "peer"]
+# t = 11.985, df = 23, p-value = 2.268e-11
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.7556469 0.9318531
+# sample estimates:
+# mean of x 
+  # 0.84375 
+
+
+### M24 Adult
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in adult condition with age 24Months
+adult.data<-x.data[x.data$valid=="in" & x.data$cond=="adul" & x.data$age=="M24",]       
+# drop levels and check exclusion
+adult.data<-droplevels(adult.data)
+# aggregate
+ind.props<-aggregate(adult.data$corr, list(adult.data$id, adult.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+###t test for adult condition 
+m24adult<-t.test(ind.props$prop[ind.props$condition=="adul"], alternative="two.sided", mu=1/3)
+
+# # 	One Sample t-test
+
+# data:  ind.props$prop[ind.props$condition == "adul"]
+# t = 6.0753, df = 23, p-value = 3.388e-06
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.5544201 0.7827161
+# sample estimates:
+# mean of x 
+# 0.6685681 
+
+
+### M36 Adult
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in adult condition with age 24Months
+adult.data<-x.data[x.data$valid=="in" & x.data$cond=="adul" & x.data$age=="M36",]       
+# drop levels and check exclusion
+adult.data<-droplevels(adult.data)
+# aggregate
+ind.props<-aggregate(adult.data$corr, list(adult.data$id, adult.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+###t test for adult condition 
+m36adult<-t.test(ind.props$prop[ind.props$condition=="adul"], alternative="two.sided", mu=1/3)
+
+	# One Sample t-test
+
+# data:  ind.props$prop[ind.props$condition == "adul"]
+# t = 18.688, df = 23, p-value = 2.11e-15
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.8366572 0.9619539
+# sample estimates:
+# mean of x 
+# 0.8993056 
+
+
+```
+
+To test whether children’s comprehension was above chance, we ran two-tailed one-sample t-tests for each condition separately with the chance level set to 1/3. When taking data from all nine trials, two-year-olds were above chance in both conditions (peer: mean = 49.6%, t(23) = 2.64, p = 0.01; adult: mean = 66.9%, t(23) = 6.08, p < 0.001). The same was true for the three-year-olds (peer: mean = 84.7%, t(23) = 11.99, p < 0.001; adult: mean = 89.9%, t(23) = 16.69, p < 0.001). 
+
+
+### Test against chance - first three trials
+```{r choice against chance - first three trials, echo = T}
+
+### M24 Peer 1-3
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in peer condition
+peer.data<-x.data[x.data$valid=="in" & x.data$cond=="peer" & x.data$age=="M24",]       
+# drop levels and check exclusion
+peer.data<-droplevels(peer.data)
+# choose only trials 1/2/3
+peer123.data<-peer.data[peer.data$trial=="1"| peer.data$trial=="2" | peer.data$trial=="3",]       
+peer123.data<-droplevels(peer123.data)
+# aggregate
+ind123.props<-aggregate(peer123.data$corr, list(peer123.data$id, peer123.data$cond), mean)
+colnames(ind123.props)<-c("ind","condition","prop")
+###t test for peer condition 
+m24peer3<-t.test(ind123.props$prop[ind123.props$condition=="peer"], alternative="two.sided", mu=1/3)
+
+	# One Sample t-test
+
+# data:  ind123.props$prop[ind123.props$condition == "peer"]
+# t = 1.4968, df = 23, p-value = 0.148
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.2961936 0.5649175
+# sample estimates:
+# mean of x 
+# 0.4305556 
+
+
+### M36 Peer 1-3
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in peer condition
+peer.data<-x.data[x.data$valid=="in" & x.data$cond=="peer" & x.data$age=="M36",]       
+# drop levels and check exclusion
+peer.data<-droplevels(peer.data)
+# choose only trials 1/2/3
+peer123.data<-peer.data[peer.data$trial=="1"| peer.data$trial=="2" | peer.data$trial=="3",]       
+peer123.data<-droplevels(peer123.data)
+# aggregate
+ind123.props<-aggregate(peer123.data$corr, list(peer123.data$id, peer123.data$cond), mean)
+colnames(ind123.props)<-c("ind","condition","prop")
+###t test for peer condition 
+m36peer123<-t.test(ind123.props$prop[ind123.props$condition=="peer"], alternative="two.sided", mu=1/3)
+
+# # data:  ind123.props$prop[ind123.props$condition == "peer"]
+# t = 8.3647, df = 23, p-value = 1.979e-08
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.6887714 0.9223397
+# sample estimates:
+# mean of x 
+# 0.8055556 
+
+### M24 Adult 1-3
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only first three trials in adult condition 24 months, no drops
+adult.data<-x.data[x.data$valid=="in" & x.data$cond=="adul" & x.data$age=="M24",]       
+# drop levels and check exclusion
+adult.data<-droplevels(adult.data)
+# choose only trials 1/2/3
+adult123.data<-adult.data[adult.data$trial=="1"| adult.data$trial=="2" | adult.data$trial=="3",]       
+adult123.data<-droplevels(adult123.data)
+# aggregate
+ind123.props<-aggregate(adult123.data$corr, list(adult123.data$id, adult123.data$cond), mean)
+colnames(ind123.props)<-c("ind","condition","prop")
+###t test for adult condition 
+m24adult123<-t.test(ind123.props$prop[ind123.props$condition=="adul"], alternative="two.sided", mu=1/3)
+
+	# One Sample t-test
+
+# data:  ind123.props$prop[ind123.props$condition == "adul"]
+# t = 6.1438, df = 23, p-value = 2.877e-06
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.5590376 0.7881847
+# sample estimates:
+# mean of x 
+# 0.6736111 
+
+
+### M36 Adult 1-3
+######################################
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only first three trials in adult condition 36 months, no drops
+adult.data<-x.data[x.data$valid=="in" & x.data$cond=="adul" & x.data$age=="M36",]       
+# drop levels and check exclusion
+adult.data<-droplevels(adult.data)
+# choose only trials 1/2/3
+adult123.data<-adult.data[adult.data$trial=="1"| adult.data$trial=="2" | adult.data$trial=="3",]       
+adult123.data<-droplevels(adult123.data)
+# aggregate
+ind123.props<-aggregate(adult123.data$corr, list(adult123.data$id, adult123.data$cond), mean)
+colnames(ind123.props)<-c("ind","condition","prop")
+###t test for adult condition 
+m36adult123<-t.test(ind123.props$prop[ind123.props$condition=="adul"], alternative="two.sided", mu=1/3)
+
+	# One Sample t-test
+
+# data:  ind123.props$prop[ind123.props$condition == "adul"]
+# t = 16.127, df = 23, p-value = 4.968e-14
+# alternative hypothesis: true mean is not equal to 0.3333333
+# 95 percent confidence interval:
+ # 0.8418403 0.9914930
+# sample estimates:
+# mean of x 
+# 0.9166667 
+
+
+```
+To further explore the data, we formed a subset comprising only the first three experimental trials and found that only the two-year-olds in the peer condition were not statistically better than chance (mean = 43.1%, t(23) = 1.5, p = 0.15). Two-year-olds in the adult condition performed above chance from the outset (mean = 67.4%, t(23) = 6.14, p < 0.001). 
+
+
+### Influence of Peer Experience
+```{r peer influence choice, echo = T}
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials in peer condition
+choice.data<-x.data[x.data$valid=="in" & x.data$cond=="peer",]
+# ztransform trial
+choice.data$trial<-as.numeric(as.character(choice.data$trial))
+choice.data$z.trial<-as.vector(scale(choice.data$trial))
+# sex into m f
+choice.data$mfsex<-"m"
+choice.data$mfsex[choice.data$sex==0]<-"f"
+choice.data$mfsex<-as.factor(choice.data$mfsex)
+# dummy code age
+choice.data$dumage=as.numeric(choice.data$age==levels(choice.data$age)[2])
+# realtime spent with same age peers
+choice.data$q1a[choice.data$q1a=="na"]=NA
+choice.data$q1b[choice.data$q1b=="na"]=NA
+choice.data$q1a=as.numeric(as.character(choice.data$q1a))
+choice.data$q1b=as.numeric(as.character(choice.data$q1b))
+choice.data$hours<-(choice.data$q1a)
+choice.data$hours[choice.data$age=="M36"]<-choice.data$q1b[choice.data$age=="M36"]
+choice.data$z.hours<-as.vector(scale(choice.data$hours))
+
+# check data: n=48, only valid data 419 observations
+choice.data<-droplevels(choice.data)
+
+### run model
+library(lme4)
+# optimizer
+glmer.control<-glmerControl(optCtrl=list(maxfun=1000000), optimizer = "bobyqa")
+
+allres<-glmer(corr~age*z.hours +z.trial +mfsex +(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video)+(0+z.hours|video)+(0+I(dumage*z.hours)|video), data=choice.data, family=binomial, control=glmer.control)
+
+### FULL NULL COMP
+
+allres.null<-glmer(corr~age +z.trial +mfsex +(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video)+(0+z.hours|video)+(0+I(dumage*z.hours)|video), data=choice.data, family=binomial, control=glmer.control)
+
+resultpeertime<-anova(allres.null, allres, test="Chisq")
+
+#Data: choice.data
+#Models:
+#allres.null: corr ~ age + z.trial + mfsex + (1 | id) + (0 + z.trial | id) + 
+#allres.null:     (1 | video) + (0 + z.trial | video) + (0 + dumage | video) + 
+#allres.null:     (0 + z.hours | video) + (0 + I(dumage * z.hours) | video)
+#allres: corr ~ age * z.hours + z.trial + mfsex + (1 | id) + (0 + z.trial | 
+#allres:     id) + (1 | video) + (0 + z.trial | video) + (0 + dumage | 
+#allres:     video) + (0 + z.hours | video) + (0 + I(dumage * z.hours) | 
+#allres:     video)
+#            Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+#allres.null 11 421.64 465.57 -199.82   399.64                         
+#allres      13 422.73 474.65 -198.37   396.73 2.9066      2     0.2338
+
+```
+In order to test for an influence of peer experience, we used a GLMM and adapted the model structure used above for this purpose. The proportion of correct responses was entered as the dependent measure and the hours spent with peers per week served as a fixed effect. Age (two-year-olds, three-year-olds) was added as another fixed effect and we allowed for an interaction of peer time and age. Sex and trial number were entered as further fixed effects to be controlled for. Dyad and subject were included as random effects. Furthermore, trial number was added as a random slope within dyad and subject as well as a correlation of the slopes and random intercepts. For this analysis, we only used the data from the peer condition. Therefore, condition was not included as a factor. 
+
+We found the full model was not significantly better at explaining the data than a null model containing all factors except for the amount of time spent with peers per week (likelihood-ratio-test; χ2 = 2.91, Df = 2, p = 0.23). Hence, peer experience does not emerge as a meaningful predictor for children’s search performance. 
+
+## Imitation
+
+### Full-null comparision
+```{r imitation full null, echo = T}
+
+# load packages
+library(lme4)
+
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in",]     
+
+# ztransform trial
+choice.data$trial<-as.numeric(as.character(choice.data$trial))
+choice.data$z.trial<-as.vector(scale(choice.data$trial))
+
+# sex into m f
+choice.data$mfsex<-"m"
+choice.data$mfsex[choice.data$sex==0]<-"f"
+choice.data$mfsex<-as.factor(choice.data$mfsex)
+
+# dummy code age
+choice.data$dumage=as.numeric(choice.data$age==levels(choice.data$age)[2])
+
+# optimizer
+glmer.control<-glmerControl(optCtrl=list(maxfun=1000000), optimizer = "bobyqa")
+
+# Full Model
+allres<-glmer(imitation~cond*age+z.trial+mfsex+(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video), data=choice.data, family=binomial, control=glmer.control)
+
+# #checkk stability
+# source("./glmm_stability.r")
+
+# allres_stab=glmm.model.stab(model.res=allres, contr=glmer.control, para=T) 
+# allres_stab$summary
+
+### null model
+allres.null<-glmer(imitation~z.trial+mfsex+(1|id)+(0+z.trial|id)+(1|video)+(0+z.trial|video)+(0+dumage|video), data=choice.data, family=binomial, control=glmer.control)
+
+# full null comparison
+results<-anova(allres.null, allres, test="Chisq")
+
+
+```
+In a GLMM with age and condition as predictors as well as an interaction of age and condition, the full model was not significantly better at explaining the imitation response than a null model without these predictors (likelihood-ratio-test; χ2 = 5.88, Df = 3, p = 0.12). 
+
+### ANOVA
+```{r imitation anova, echo = T}
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+imi.data<-x.data[x.data$valid=="in",]
+
+# drop levels
+imi.data<-droplevels(imi.data)
+
+# get props
+props<-aggregate(imi.data$imitation, list(imi.data$id, imi.data$cond, imi.data$age), mean)
+colnames(props)<-c("id","condition","age","imitation")
+
+imi.agg<-aggregate(imi.data$imitation, list(imi.data$id, imi.data$cond, imi.data$age), mean)
+colnames(imi.agg)<-c("id","condition","age","imitation")
+
+res<-anova(lm(imitation ~ condition*age, data=imi.agg))
+
+# 
+# Response:               Df Sum Sq  Mean Sq F value  Pr(>F)  
+# condition      1 0.1931 0.193102  3.5083 0.06424 .
+# age            1 0.1575 0.157536  2.8621 0.09407 .
+# condition:age  1 0.0012 0.001157  0.0210 0.88502  
+# Residuals     92 5.0638 0.055042                  
+# ---
+# Signif. codes:  0 â***â 0.001 â**â 0.01 â*â 0.05 â.â 0.1 â â 1
+
+```
+Using an ANOVA, we found neither a significant effect of condition (F(1, 92) = 3.51, p = 0.06) or age (F(1, 92) = 2.86, p = 0.09), nor a significant interaction of age and condition (F(1,92) = 0.02, p = 0.89). 
+
+### Mann-whitney U test
+```{r imitation u test, echo = T}
+
+# load package
+library(exactRankTests)
+
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+imi.data<-x.data[x.data$valid=="in",]     
+
+# aggregate
+imitation<-aggregate(imi.data$imitation, list(imi.data$id, imi.data$cond), mean)
+colnames(imitation)<-c("id","condition","prop")
+
+res<-wilcox.exact(imitation$prop[imitation$condition=="adul"], imitation$prop[imitation$condition=="peer"], exact=T, paired=F)
+
+```
+Results were confirmed by a Mann-Whitney test finding no effect of condition on rates of imitation (U = 983, p = 0.15).
+
+### ANCOVA (imitation and choice behavior)
+```{r imitation choice ancova, echo = T}
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in",]     
+# get data by id and condition
+choices<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(choices)<-c("id","condition","prop")
+
+imitation<-aggregate(choice.data$imitation, list(choice.data$id, choice.data$cond), mean)
+colnames(imitation)<-c("id","condition","prop")
+
+res=lm(choices$prop~imitation$prop*choices$condition)
+result<-anova(res)
+
+```
+
+We ran an ANCOVA entering imitation rates and condition as predictors on participants’ choice behavior while allowing for an interaction of both predictors. This yielded an effect of condition (F(1,92) = 4.99, p = 0.03). However, imitation rates (F(1,92) = 1.1, p = 0.3) did not emerge as a significant predictor. Also, we found no interaction (F(1,92) = 0.14, p = 0.71). 
+
+```{r spearmans correlation choice imitation, echo = T}
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in",]     
+# get data by id and condition
+choices<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(choices)<-c("id","condition","prop")
+
+imitation<-aggregate(choice.data$imitation, list(choice.data$id, choice.data$cond), mean)
+colnames(imitation)<-c("id","condition","prop")
+
+results<-cor.test(choices$prop, imitation$prop, method= c("spearman"), exact = TRUE)
+
+```
+
+A Spearman's correlation confirmed that there was no significant effect of imitation rates on children’s performance in the choice task (rs = 0.06, p = 0.54). 
+
+## Eyetracking Analysis
+
+### Eyetracking Sample - Choice Data
+
+```{r ET sample choice data, echo = T}
+
+# load data from same folder as script
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials 
+choice.data<-x.data[x.data$valid=="in",]
+# get only ET sample
+choice.data<-choice.data[choice.data$ET=="ET",]
+### drop levels
+choice.data<-droplevels(choice.data)
+# get props
+props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond, choice.data$age), mean)
+colnames(props)<-c("id","condition","age","prop")
+
+choice.agg<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond, choice.data$age), mean)
+colnames(choice.agg)<-c("id","condition","age","prop")
+
+resETanova<-anova(lm(prop ~ condition*age, data=choice.agg))
+
+# Analysis of Variance Table
+# 
+# Response: prop
+#               Df Sum Sq Mean Sq F value   Pr(>F)   
+# condition      1 0.3923 0.39232  6.2032 0.015920 * 
+# age            1 0.7599 0.75993 12.0156 0.001054 **
+# condition:age  1 0.1338 0.13382  2.1159 0.151676   
+# Residuals     53 3.3520 0.06325
+
+
+```
+The ANOVA indicated a significant effect of both condition (F(1,53) = 6.2, p = 0.02) and age (F(1,53) = 12.02, p = 0.001).  Again, the interaction was not significant (F(1,53) =2.12, p = 0.15). 
+
+```{r ET sample choice data mann-whitney, echo = T}
+
+### both age-groups
+#######################
+
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials 
+choice.data<-x.data[x.data$valid=="in",]
+# get only ET sample
+choice.data<-choice.data[choice.data$ET=="ET",]
+### drop levels
+choice.data<-droplevels(choice.data)
+# get indicidual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(ind.props)<-c("ind","condition","prop")
+
+# Wilcoxon
+etdataall<-wilcox.test(ind.props$prop[ind.props$condition=="adul"], ind.props$prop[ind.props$condition=="peer"], exact=T)
+# get rank warning : ties?
+	# Wilcoxon rank sum test with continuity correction
+
+# data:  ind.props$prop[ind.props$condition == "adul"] and ind.props$prop[ind.props$condition == "peer"]
+# W = 534, p-value = 0.03121
+# alternative hypothesis: true location shift is not equal to 0
+
+### two-year-olds
+#######################
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials 
+choice.data<-x.data[x.data$valid=="in",]
+# get only ET sample
+choice.data<-choice.data[choice.data$ET=="ET",]
+# get indicidual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond, choice.data$age), mean)
+colnames(ind.props)<-c("ind","condition", "age", "prop")
+ind.props2<-ind.props[ind.props$age=="M24",]
+
+# Wilcoxon : exact: F and then no warning
+m24etsample<-wilcox.test(ind.props2$prop[ind.props2$condition=="adul"], ind.props2$prop[ind.props2$condition=="peer"], exact=F)
+
+	# Wilcoxon rank sum test with continuity correction
+
+# data:  ind.props2$prop[ind.props2$condition == "adul"] and ind.props2$prop[ind.props2$condition == "peer"]
+# W = 117.5, p-value = 0.04966
+# alternative hypothesis: true location shift is not equal to 0
+
+
+
+### three-year-olds
+#######################
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+# get only valid trials 
+choice.data<-x.data[x.data$valid=="in",]
+# get only ET sample
+choice.data<-choice.data[choice.data$ET=="ET",]
+# get indicidual props
+ind.props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond, choice.data$age), mean)
+colnames(ind.props)<-c("ind","condition", "age", "prop")
+ind.props2<-ind.props[ind.props$age=="M36",]
+
+# Wilcoxon : exact: F and then no warning
+m36etsample<-wilcox.test(ind.props2$prop[ind.props2$condition=="adul"], ind.props2$prop[ind.props2$condition=="peer"], exact=F)
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  ind.props2$prop[ind.props2$condition == "adul"] and ind.props2$prop[ind.props2$condition == "peer"]
+# W = 140, p-value = 0.4033
+# alternative hypothesis: true location shift is not equal to 0
+
+```
+
+A Mann-Whitney test revealed a significant effect of condition (W = 534, p = 0.03) when testing both age groups. Again, the effect is driven by the younger age group as there is a significant effect of condition in the two-year-olds (W = 117.5, p = 0.049) but not in the three-year-olds (W = 140, p = 0.4).
+
+
+### Time Spent Looking at screen
+
+```{r time looking at screen, echo = T}
+
+# Load source scripts.
+source("h20_functions_short.r")
+
+# Load packages
+require(png)
+require(sciplot)
+require(exactRankTests)
+# load data
+load("./ET_PIP_Step1_2016-10-26.RData")
+# load table with timing of stimuli
+time.table = read.table(file="ETPIP_TIMING.txt", header=T, sep="\t")
+
+# x_left, x_right, y_up, y_down
+aoi.cup1 = c(0, 500,  960,  2280)
+aoi.cup2 = c(710, 1210,  960,  2280)
+aoi.cup3 = c(1420, 1920,  960,  2280)
+
+
+myData.combi.ver1 = c()
+myData.combi.ver2 = c()
+
+# time.window = c(1, 10*60)
+
+main.data.x.adj.cup = subset(main.data.x.adj, grepl("cup", main.data.x.adj$stimulus))
+main.data.x.adj.cup = droplevels(main.data.x.adj.cup)
+main.data.y.adj.cup = subset(main.data.y.adj, grepl("cup", main.data.y.adj$stimulus))
+main.data.y.adj.cup = droplevels(main.data.y.adj.cup)
+# main.data.x.adj.cup$stimulus = as.character(main.data.x.adj.cup$stimulus)
+
+trial.nr = rep(NA, 1, nrow(main.data.y.adj.cup))
+trial.nr[grepl("9", main.data.y.adj.cup$stimulus)] <- 1
+trial.nr[grepl("11", main.data.y.adj.cup$stimulus)] <- 2
+trial.nr[grepl("13", main.data.y.adj.cup$stimulus)] <- 3
+trial.nr[grepl("15", main.data.y.adj.cup$stimulus)] <- 4
+trial.nr[grepl("17", main.data.y.adj.cup$stimulus)] <- 5
+trial.nr[grepl("19", main.data.y.adj.cup$stimulus)] <- 6
+trial.nr[grepl("21", main.data.y.adj.cup$stimulus)] <- 7
+trial.nr[grepl("23", main.data.y.adj.cup$stimulus)] <- 8
+trial.nr[grepl("25", main.data.y.adj.cup$stimulus)] <- 9
+
+# main.data.x.adj.cup = cbind(main.data.x.adj.cup, trial.nr)
+
+for(i in 1:nrow(main.data.x.adj.cup)){
+
+	subj.x = as.integer(main.data.x.adj.cup[i,12:ncol(main.data.x.adj.cup)])
+	subj.y = as.integer(main.data.y.adj.cup[1,12:ncol(main.data.y.adj.cup)])
+	
+	subj.stim = as.character(main.data.x.adj.cup[i,]$stimulus)
+	subj.stim  = substr(subj.stim, 1, 12)	
+	
+	subj.str = c(as.character(main.data.x.adj.cup[i,1]), as.character(main.data.x.adj.cup[i,2]), as.character(main.data.x.adj.cup[i,3]), as.character(main.data.x.adj.cup[i,4]), as.character(main.data.x.adj.cup[i,5]), as.character(main.data.x.adj.cup[i,6]), as.character(main.data.x.adj.cup[i,7]), as.character(main.data.x.adj.cup[i,8]), as.character(main.data.x.adj.cup[i,9]), as.character(main.data.x.adj.cup[i,10]), as.character(main.data.x.adj.cup[i,11]))
+	
+	subj.trial = trial.nr[i]
+	
+	subj.str = c(subj.str,  as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))
+	correct.cup = as.numeric(unlist(strsplit(unlist(strsplit(unlist(strsplit(subj.str, split="_")[1])[3], split="-"))[1], split=""))[4])
+
+	# Choice
+	correct.choice <- NA
+
+	if(!is.na(as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))){
+	if(as.numeric(subj.str[12]) == correct.cup){correct.choice = 1}else if(as.numeric(subj.str[12]) != correct.cup){correct.choice = 0}}
+
+	subj.str = c(subj.str, correct.choice)
+	
+	subj.time = time.table[time.table$stim== subj.stim,]
+	
+	time.1 = c(subj.time$start_ms_abs, subj.time$att_on_ms_abs) # From start video to touch face
+	time.1 = round(time.1/1000*60)
+	
+	time.2 = c(subj.time$att_on_ms_abs, subj.time$att_off_ms_abs) # Duration touch face
+	time.2 = round(time.2/1000*60)
+	
+	time.3 = c(subj.time$att_off_ms_abs, subj.time$poi_on_ms_abs) # Move from touch face to point
+	time.3 = round(time.3/1000*60)
+
+	time.4 = c(subj.time$poi_on_ms_abs, subj.time$poi_off_ms_abs) # Extended point
+	time.4 = round(time.4/1000*60)
+
+	time.5 = c(subj.time$poi_off_ms_abs, subj.time$out_ms_abs) # Move from point to body
+	time.5 = round(time.5/1000*60)
+
+	# !!!
+	time.4[2] <- time.5[2]
+	time.4[1] <- time.1[1]
+
+	times.combi = matrix(c(time.1, time.2, time.3, time.4, time.5), nrow=2, ncol=5)
+	
+	# cup1.hit = c()
+	# cup2.hit = c()
+	# cup3.hit = c()
+	
+	time.hits.ver1 = c()
+	time.hits.ver2 = c()
+	
+	for(b in 1:ncol(times.combi)){
+		
+		time.x = subj.x[times.combi[1,b] : times.combi[2,b]]
+		time.y = subj.y[times.combi[1,b] : times.combi[2,b]]
+
+		#cup1.hit = sum(!is.na(time.x))/(sum(!is.na(time.x))+ sum(is.na(time.x)))
+		overall.hit = sum(time.x > 0 & time.x < 1920 & time.y > 0 & time.y < 2280, na.rm=T)	
+		cup1.hit = overall.hit/sum(!is.na(time.x))
+		if(overall.hit ==0){cup1.hit<-NA}
+		
+		#cup2.hit = sum(time.x > aoi.cup2[1] & time.x < aoi.cup2[2] & time.y > aoi.cup2[3] & time.y < aoi.cup2[4], na.rm=T)
+		#up3.hit = sum(time.x > aoi.cup3[1] & time.x < aoi.cup3[2] & time.y > aoi.cup3[3] & time.y < aoi.cup3[4], na.rm=T)	
+
+		# !!!
+		# cup1.hit = cup1.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup2.hit = cup2.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup3.hit = cup3.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+
+		#cup1.hit = cup1.hit/sum(c(cup1.hit, cup3.hit), na.rm=T) 
+		cup2.hit = NA # cup2.hit/sum(c(cup1.hit, cup3.hit)) 
+		cup3.hit = NA #cup3.hit/sum(c(cup1.hit, cup3.hit),na.rm=T) 
+
+		# Look
+		if(correct.cup == 1){correct.roi = cup1.hit}else if(correct.cup == 2){correct.roi = cup2.hit}else if(correct.cup == 3){correct.roi = cup3.hit}
+	
+		time.hits.ver1 = rbind(time.hits.ver1 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+		time.hits.ver2 = cbind(time.hits.ver2 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+	}
+		
+	myData.combi.ver1 = rbind(myData.combi.ver1, cbind(t(matrix(rep(subj.str, 5), nrow=13, ncol=5)), c("time1", "time2", "time3", "time4", "time5"), time.hits.ver1))
+	myData.combi.ver2 = rbind(myData.combi.ver2, cbind(t(matrix(rep(subj.str, 4), nrow=13, ncol=4)), c("cup1", "cup2", "cup3", "correct"), time.hits.ver2))
+}
+
+myData.combi.ver1 = data.frame(myData.combi.ver1)
+myData.combi.ver2 = data.frame(myData.combi.ver2)
+
+names(myData.combi.ver1) =  c("stimulus", "study", "age", "condition", "gender", "yoke_video", "version", "side", "ID", "choices", "light", "which_cup", "correct_choice", "time_win", "roi_c1", "roi_c2", "roi_c3", "roi_cor")
+
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242363")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243017")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243102")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244285") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244573")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245607") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245891")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246867")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247453")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242947")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245553")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246372")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246643")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246945")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246993")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247350")
+
+myData.combi.ver1 = droplevels(myData.combi.ver1)
+
+myData.combi.ver1$roi_c1 = as.numeric(as.character(myData.combi.ver1$roi_c1))
+myData.combi.ver1$roi_c2 = as.numeric(as.character(myData.combi.ver1$roi_c2))
+myData.combi.ver1$roi_c3 = as.numeric(as.character(myData.combi.ver1$roi_c3))
+myData.combi.ver1$roi_cor = as.numeric(as.character(myData.combi.ver1$roi_cor))
+myData.combi.ver1$correct_choice = as.numeric(as.character(myData.combi.ver1$correct_choice))
+
+################ One data point per child
+
+# Subset
+time.w4 = subset(myData.combi.ver1, time_win=="time4")
+time.w4[grepl('cup2',time.w4$stimulus),]$correct_choice <- NA
+
+trial.count = rep(NA, nrow(time.w4))
+trial.count[grepl('9',time.w4$stimulus)] <- 1
+trial.count[grepl('11',time.w4$stimulus)] <- 2
+trial.count[grepl('13',time.w4$stimulus)] <- 3
+trial.count[grepl('15',time.w4$stimulus)] <- 4
+trial.count[grepl('17',time.w4$stimulus)] <- 5
+trial.count[grepl('19',time.w4$stimulus)] <- 6
+trial.count[grepl('21',time.w4$stimulus)] <- 7
+trial.count[grepl('23',time.w4$stimulus)] <- 8
+trial.count[grepl('25',time.w4$stimulus)] <- 9
+time.w4 = cbind(trial.count, time.w4)
+
+# Double-check these:
+time.w4 = subset(time.w4, ID!="248245")
+time.w4 = subset(time.w4, ID!="248413")
+time.w4 = droplevels(time.w4)
+
+time.w4.means = as.numeric(tapply(as.numeric(time.w4 $roi_c1), time.w4 $ID, FUN=mean, na.rm =T))
+time.w4.choice = as.numeric(tapply(as.numeric(time.w4 $correct_choice), time.w4 $ID, FUN=mean, na.rm =T))
+
+# Subset with one row per child to get strings
+time.w4 = subset(time.w4, grepl("-9", time.w4 $stimulus))
+time.w4 <- time.w4[order(as.numeric(as.character(time.w4 $ID))),]
+time.w4 = cbind(time.w4, time.w4.means, time.w4.choice)
+
+### anonva
+resaov = aov(time.w4.means ~ condition*age, data = time.w4)
+# summary(resaov)
+
+              # Df Sum Sq  Mean Sq F value Pr(>F)
+# condition      1 0.0088 0.008801   1.367  0.248
+# age            1 0.0077 0.007674   1.192  0.280
+# condition:age  1 0.0022 0.002187   0.340  0.562
+# Residuals     52 0.3347 0.006437               
+# 1 observation deleted due to missingness
+
+
+```
+
+To check whether children were more attentive to the presentation of the stimulus material in either condition we calculated the overall proportion of time each child spent looking at the screen. Rates were consistently high across conditions and age groups (two-year-olds: peer = 89.5%, adult = 90.9%; three-year-olds: peer = 86%, adult = 89.9%; see figure 6). 
+
+Entering this proportion as a dependent measure into an ANOVA revealed that the overall time children spent looking at the screen did not vary significantly as a function of age (F (1,52) = 1.19, p = 0.28) or condition (F (1,52) = 1.37, p = 0.25). Also, the interaction between condition and age (F (1,52) = 0.34, p = 0.56) was not significant. 
+
+### Data Preparation 
+
+For the readers convenience, data preparation for looking time data is presented only once in the following analyses. In order to reproduce the results of the following sections, the code needs to be run from here. 
+
+```{r prepare data, echo = T}
+
+# Load source scripts.
+source("h20_functions_short.r")
+
+# Load packages
+require(png)
+require(sciplot)
+require(exactRankTests)
+
+# load data
+load("./ET_PIP_Step1_2016-10-26.RData")
+
+# load table with timing of stimuli
+time.table = read.table(file="ETPIP_TIMING.txt", header=T, sep="\t")
+
+# For each subject
+# For one stimulus
+# Extract gaze data
+# Bin gaze data according to time window
+# For each time window plot and save (Gaze-path plot)
+# Number of samples in eah AOI
+
+# x_left, x_right, y_up, y_down
+aoi.cup1 = c(0, 500,  960,  2280)
+aoi.cup2 = c(710, 1210,  960,  2280)
+aoi.cup3 = c(1420, 1920,  960,  2280)
+
+myData.combi.ver1 = c()
+myData.combi.ver2 = c()
+
+# time.window = c(1, 10*60)
+
+main.data.x.adj.cup = subset(main.data.x.adj, grepl("cup", main.data.x.adj$stimulus))
+main.data.x.adj.cup = droplevels(main.data.x.adj.cup)
+main.data.y.adj.cup = subset(main.data.y.adj, grepl("cup", main.data.y.adj$stimulus))
+main.data.y.adj.cup = droplevels(main.data.y.adj.cup)
+# main.data.x.adj.cup$stimulus = as.character(main.data.x.adj.cup$stimulus)
+
+trial.nr = rep(NA, 1, nrow(main.data.y.adj.cup))
+trial.nr[grepl("9", main.data.y.adj.cup$stimulus)] <- 1
+trial.nr[grepl("11", main.data.y.adj.cup$stimulus)] <- 2
+trial.nr[grepl("13", main.data.y.adj.cup$stimulus)] <- 3
+trial.nr[grepl("15", main.data.y.adj.cup$stimulus)] <- 4
+trial.nr[grepl("17", main.data.y.adj.cup$stimulus)] <- 5
+trial.nr[grepl("19", main.data.y.adj.cup$stimulus)] <- 6
+trial.nr[grepl("21", main.data.y.adj.cup$stimulus)] <- 7
+trial.nr[grepl("23", main.data.y.adj.cup$stimulus)] <- 8
+trial.nr[grepl("25", main.data.y.adj.cup$stimulus)] <- 9
+
+# main.data.x.adj.cup = cbind(main.data.x.adj.cup, trial.nr)
+
+for(i in 1:nrow(main.data.x.adj.cup)){
+
+	subj.x = as.integer(main.data.x.adj.cup[i,12:ncol(main.data.x.adj.cup)])
+	subj.y = as.integer(main.data.y.adj.cup[1,12:ncol(main.data.y.adj.cup)])
+	
+	subj.stim = as.character(main.data.x.adj.cup[i,]$stimulus)
+	subj.stim  = substr(subj.stim, 1, 12)	
+	
+	subj.str = c(as.character(main.data.x.adj.cup[i,1]), as.character(main.data.x.adj.cup[i,2]), as.character(main.data.x.adj.cup[i,3]), as.character(main.data.x.adj.cup[i,4]), as.character(main.data.x.adj.cup[i,5]), as.character(main.data.x.adj.cup[i,6]), as.character(main.data.x.adj.cup[i,7]), as.character(main.data.x.adj.cup[i,8]), as.character(main.data.x.adj.cup[i,9]), as.character(main.data.x.adj.cup[i,10]), as.character(main.data.x.adj.cup[i,11]))
+	
+	subj.trial = trial.nr[i]
+	
+	subj.str = c(subj.str,  as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))
+	correct.cup = as.numeric(unlist(strsplit(unlist(strsplit(unlist(strsplit(subj.str, split="_")[1])[3], split="-"))[1], split=""))[4])
+
+	# Choice
+	correct.choice <- NA
+
+	if(!is.na(as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))){
+	if(as.numeric(subj.str[12]) == correct.cup){correct.choice = 1}else if(as.numeric(subj.str[12]) != correct.cup){correct.choice = 0}}
+
+	subj.str = c(subj.str, correct.choice)
+	
+	subj.time = time.table[time.table$stim== subj.stim,]
+	
+	time.1 = c(subj.time$start_ms_abs, subj.time$att_on_ms_abs) # From start video to touch face
+	time.1 = round(time.1/1000*60)
+	
+	time.2 = c(subj.time$att_on_ms_abs, subj.time$att_off_ms_abs) # Duration touch face
+	time.2 = round(time.2/1000*60)
+	
+	time.3 = c(subj.time$att_off_ms_abs, subj.time$poi_on_ms_abs) # Move from touch face to point
+	time.3 = round(time.3/1000*60)
+
+	time.4 = c(subj.time$poi_on_ms_abs, subj.time$poi_off_ms_abs) # Extended point
+	time.4 = round(time.4/1000*60)
+
+	time.5 = c(subj.time$poi_off_ms_abs, subj.time$out_ms_abs) # Move from point to body
+	time.5 = round(time.5/1000*60)
+
+	# !!!
+	# time.4[2] <- time.5[2]
+	# time.4[1] <- time.3[1]
+
+	times.combi = matrix(c(time.1, time.2, time.3, time.4, time.5), nrow=2, ncol=5)
+	
+	# cup1.hit = c()
+	# cup2.hit = c()
+	# cup3.hit = c()
+	
+	time.hits.ver1 = c()
+	time.hits.ver2 = c()
+	
+	for(b in 1:ncol(times.combi)){
+		
+		time.x = subj.x[times.combi[1,b] : times.combi[2,b]]
+		time.y = subj.y[times.combi[1,b] : times.combi[2,b]]
+
+		cup1.hit = sum(time.x > aoi.cup1[1] & time.x < aoi.cup1[2] & time.y > aoi.cup1[3] & time.y < aoi.cup1[4], na.rm=T)
+		cup2.hit = sum(time.x > aoi.cup2[1] & time.x < aoi.cup2[2] & time.y > aoi.cup2[3] & time.y < aoi.cup2[4], na.rm=T)
+		cup3.hit = sum(time.x > aoi.cup3[1] & time.x < aoi.cup3[2] & time.y > aoi.cup3[3] & time.y < aoi.cup3[4], na.rm=T)	
+
+		# !!!
+		# cup1.hit = cup1.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup2.hit = cup2.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup3.hit = cup3.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+
+		cup1.hit = cup1.hit/sum(c(cup1.hit, cup3.hit), na.rm=T) 
+		cup2.hit = NA # cup2.hit/sum(c(cup1.hit, cup3.hit)) 
+		cup3.hit = cup3.hit/sum(c(cup1.hit, cup3.hit),na.rm=T) 
+
+		# Look
+		if(correct.cup == 1){correct.roi = cup1.hit}else if(correct.cup == 2){correct.roi = cup2.hit}else if(correct.cup == 3){correct.roi = cup3.hit}
+	
+		time.hits.ver1 = rbind(time.hits.ver1 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+		time.hits.ver2 = cbind(time.hits.ver2 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+	}
+		
+	myData.combi.ver1 = rbind(myData.combi.ver1, cbind(t(matrix(rep(subj.str, 5), nrow=13, ncol=5)), c("time1", "time2", "time3", "time4", "time5"), time.hits.ver1))
+	myData.combi.ver2 = rbind(myData.combi.ver2, cbind(t(matrix(rep(subj.str, 4), nrow=13, ncol=4)), c("cup1", "cup2", "cup3", "correct"), time.hits.ver2))
+}
+
+myData.combi.ver1 = data.frame(myData.combi.ver1)
+myData.combi.ver2 = data.frame(myData.combi.ver2)
+
+names(myData.combi.ver1) =  c("stimulus", "study", "age", "condition", "gender", "yoke_video", "version", "side", "ID", "choices", "light", "which_cup", "correct_choice", "time_win", "roi_c1", "roi_c2", "roi_c3", "roi_cor")
+
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242363")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243017")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243102")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244285") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244573")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245607") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245891")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246867")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247453")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242947")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245553")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246372")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246643")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246945")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246993")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247350")
+
+myData.combi.ver1 = droplevels(myData.combi.ver1)
+
+myData.combi.ver1$roi_c1 = as.numeric(as.character(myData.combi.ver1$roi_c1))
+myData.combi.ver1$roi_c2 = as.numeric(as.character(myData.combi.ver1$roi_c2))
+myData.combi.ver1$roi_c3 = as.numeric(as.character(myData.combi.ver1$roi_c3))
+myData.combi.ver1$roi_cor = as.numeric(as.character(myData.combi.ver1$roi_cor))
+myData.combi.ver1$correct_choice = as.numeric(as.character(myData.combi.ver1$correct_choice))
+
+# # plot.data = subset(myData.combi.ver1, time_win=="time4"  & age=="M24" & grepl("-9", stimulus))
+# par(mfrow=c(1,2))
+# plot.data = subset(myData.combi.ver1, time_win=="time4"  & age=="M24")
+# bargraph.CI(correct_choice, roi_cor, condition, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="M24 Looking Time Correct / Incorrect", ylim=c(0,1))
+# abline(h=1/3)
+# plot.data = subset(myData.combi.ver1, time_win=="time4"  & age=="M36")
+# bargraph.CI(correct_choice, roi_cor, condition, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="M36 Looking Time Correct / Incorrect", ylim=c(0,1))
+# abline(h=1/3)
+# 
+# plot.data = subset(myData.combi.ver1, time_win=="time4")
+# bargraph.CI(correct_choice, roi_cor, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="Looking Time Correct / Incorrect", ylim=c(0,1))
+# abline(h=1/3)
+
+# 
+# 
+# plot.data = subset(myData.combi.ver1, time_win=="time4")
+# bargraph.CI(age, roi_cor, condition, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="Looking Time Correct / Incorrect", ylim=c(0,1))
+
+write.table(myData.combi.ver1 , file="ETPIP_time_all_ver.txt", sep="\t", col.names=T, row.names=F) 
+write.table(myData.combi.ver2 , file="ETPIP_time_all_ver2.txt", sep="\t", col.names=T, row.names=F) 
+
+# plot(myData.combi.ver1 $roi_cor, myData.combi.ver1 $correct_choice)
+
+# myData.combi.ver1[myData.combi.ver1$correct_choice==1 & !is.na(myData.combi.ver1$correct_choice),]$roi_cor <- NA
+
+time.w4 = subset(myData.combi.ver1, time_win=="time4")
+trial.count = rep(NA, nrow(time.w4))
+trial.count[grepl('9',time.w4$stimulus)] <- 1
+trial.count[grepl('11',time.w4$stimulus)] <- 2
+trial.count[grepl('13',time.w4$stimulus)] <- 3
+trial.count[grepl('15',time.w4$stimulus)] <- 4
+trial.count[grepl('17',time.w4$stimulus)] <- 5
+trial.count[grepl('19',time.w4$stimulus)] <- 6
+trial.count[grepl('21',time.w4$stimulus)] <- 7
+trial.count[grepl('23',time.w4$stimulus)] <- 8
+trial.count[grepl('25',time.w4$stimulus)] <- 9
+time.w4 = cbind(trial.count, time.w4)
+
+# Double-check these:
+time.w4 = subset(time.w4, ID!="248245")
+time.w4 = subset(time.w4, ID!="248413")
+
+time.w4 = droplevels(time.w4)
+write.table(time.w4 , file="ET_PIP_data_EYE.txt", sep="\t", col.names=T, row.names=F) 
+
+#time.w4 = subset(time.w4, !is.na(roi_cor))
+#time.w4 = subset(time.w4, !is.na(correct_choice))
+time.w4.means = as.numeric(tapply(as.numeric(time.w4 $roi_cor), time.w4 $ID, FUN=mean, na.rm =T))
+time.w4.choice = as.numeric(tapply(as.numeric(time.w4 $correct_choice), time.w4 $ID, FUN=mean, na.rm =T))
+time.w4 = subset(time.w4, grepl("-9", time.w4 $stimulus))
+time.w4 <- time.w4[order(as.numeric(as.character(time.w4 $ID))),]
+time.w4 = cbind(time.w4, time.w4.means, time.w4.choice)
+
+# #par(mfrow=c(1,4))
+# bargraph.CI(age, time.w4.means, condition, legend=T, data = time.w4, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="All cups", ylim=c(0,1))
+# abline(h=0.5)
+
+write.table(time.w4.means , file="averaged_table.txt", sep="\t", col.names=T, row.names=F) 
+
+# stime.w4
+
+# par(mfrow=c(1,2))
+# bargraph.CI(age, time.w4.means, condition, legend=T, data = subset(time.w4, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="All cups", ylim=c(0,1))
+# abline(h=0.5)
+
+```
+
+### ANCOVA looking & choice data
+
+```{r ancova looking and choice, echo = T}
+
+### ANCOVA looking time as a predictor 
+#######################################
+
+res = aov(time.w4.choice ~ condition*age + time.w4.means, data = time.w4)
+# summary(res)
+
+              # Df Sum Sq Mean Sq F value Pr(>F)  
+# condition      1 0.0799 0.07990   1.803 0.1871  
+# age            1 0.2907 0.29071   6.560 0.0144 *
+# time.w4.means  1 0.2209 0.22094   4.986 0.0314 *
+# condition:age  1 0.0007 0.00073   0.016 0.8986  
+# Residuals     39 1.7283 0.04432                 
+# ---
+# Signif. codes:  0 â***â 0.001 â**â 0.01 â*â 0.05 â.â 0.1 â â 1
+# 13 observations deleted due to missingness
+
+```
+
+We ran an ANCOVA entering the individuals’ overall proportion of correct choices as the dependent measure and the averaged proportion of looking to the correct AOI as an independent measure. Looking time was a significant predictor (F(1,39) = 4.97, p = 0.03) for children’s choice behavior. Again, there was a significant effect of age (F(1,39) = 6.56, p = 0.01) but not of condition (F(1,39) = 1.8, p = 0.18). The interaction between condition and age was not significant (F(1,39) = 0.02, p = 0.9). 
+
+### Correlation looking & choice data
+```{r correlation looking & choice, echo = T}
+
+# Spearmann correlation between Choice and Looking Behavior
+resultscorrelation<-cor.test(time.w4.choice, time.w4.means, data = time.w4, method="spearman")
+
+# data:  time.w4.choice and time.w4.means
+# S = 8576.7, p-value = 0.007865
+# alternative hypothesis: true rho is not equal to 0
+# sample estimates:
+      # rho 
+# 0.3955805 
+
+```
+The predictive value of looking time for the percentage of correct choices was confirmed by a Spearman's correlation (rs = 0.395 p = 0.007). 
+
+### ANOVA LOOKING TIME
+
+```{r Anova looking time, echo = T}
+
+### ANOVA
+##############################
+
+res = aov(time.w4.means ~ condition*age, data = time.w4)
+# summary(res)
+
+# #               Df Sum Sq Mean Sq F value Pr(>F)  
+# condition      1 0.2614 0.26135   4.771 0.0349 *
+# age            1 0.1728 0.17277   3.154 0.0834 .
+# condition:age  1 0.0787 0.07866   1.436 0.2379  
+# Residuals     40 2.1912 0.05478                 
+# ---
+# Signif. codes:  0 â***â 0.001 â**â 0.01 â*â 0.05 â.â 0.1 â â 1
+# 13 observations deleted due to missingness
+
+### PLOTTING RESIDUALS ### 
+###########################
+
+# hist(residuals(res))
+# plot(fitted(res), residuals(res))
+# hist(time.w4$time.w4.means)
+# hist((time.w4$time.w4.means))
+
+
+```
+Finally, when testing the proportion of time children spent looking at the cued AOI across conditions, an ANOVA indicated a significant main effect of condition (F(1,40) = 4.77, p = 0.03) and a trend for age (F(1,40) = 3.2, p = 0.08). The interaction was not significant (F(1,40) = 1.44, p = 0.24).Plotting residuals against fitted values revealed that the residuals are not normally distributed which could make the ANOVA non-conservative. 
+ 
+
+### Mann-whitney LOOKING TIME
+```{r Mann-Whitney looking time, echo = T}
+
+# aggregate
+m.peer = time.w4[time.w4$condition=="peer",]$time.w4.means
+m.adult = time.w4[time.w4$condition=="adul",]$time.w4.means
+
+reslooking<-wilcox.exact(m.peer, m.adult, exact=T, paired=F)
+
+	# Exact Wilcoxon rank sum test
+
+# data:  m.peer and m.adult
+# W = 211, p-value = 0.4009
+# alternative hypothesis: true mu is not equal to 0
+
+
+```
+
+A Mann-Whitney U test comparing both conditions did not indicate a significant effect of condition (U = 211, p = 0.4). Therefore, it should be concluded that across conditions there is no difference in the averaged proportion of time children spent looking at the correct box.  
+
+# Plotting
+
+Below we provide the scripts for preparing and plotting data seperately for all plots in the respective figures. 
+
+
+### figure 3 - choice data - 24-month-olds 
+```{r figure 3 - choice data - 24-month-olds, echo = T}
+# NEW Path (06/2019) references data when in the same 
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials with age 24Months
+choice.data<-x.data[x.data$valid=="in" & x.data$age=="M24",]     
+
+# get props
+props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+
+means<-aggregate(props$prop, list(props$condition), mean)
+
+colnames(means)<-c("condition","mean.prop")
+
+tiff(file="./fig3_M24.tiff",
+     width=6, height=6, units="in", res=300)
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Compliant Choices", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#add chance line
+abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+#add points so that they're over the gray chance line
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+#add chance line
+abline(h=1/3, col="gray81")
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+# # # if significant add stars
+#add star bar/bar star
+segments(x0=1, y0=1.08, x1=2, y1=1.08, lwd=2)
+text(1.5, 1.115, "*", cex=1.5)
+
+# dev.off()
+
+```
+
+
+### figure 3 - choice data - 36-month-olds
+
+```{r figure 3 - choice data - 36-month-olds, echo = T}
+
+# NEW Path (06/2019) references data when in the same 
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials with age 24Months
+choice.data<-x.data[x.data$valid=="in" & x.data$age=="M36",]     
+
+# # get data by id and condition
+# aggregate(choice.data$corr, list(choice.data$trial, choice.data$cond), mean)
+
+# get props
+props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+
+means<-aggregate(props$prop, list(props$condition), mean)
+
+colnames(means)<-c("condition","mean.prop")
+
+tiff(file="./fig3_M36.tiff",
+      width=6, height=6, units="in", res=300)
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Compliant Choices", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#add chance line
+abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+#add points so that they're over the gray chance line
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+#add chance line
+abline(h=1/3, col="gray81")
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+# # # if significant add stars
+#add star bar/bar star
+segments(x0=1, y0=1.08, x1=2, y1=1.08, lwd=2)
+text(1.5, 1.115, "*", cex=1.5)
+
+# dev.off()
+
+
+```
+
+
+### figure 4 - spontaneous imitation
+
+```{r figure 4 - spontaneous imitation, echo = T}
+
+# NEW Path (06/2019) references data when in the same 
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials
+choice.data<-x.data[x.data$valid=="in",]     
+
+# get props
+props<-aggregate(choice.data$imitation, list(choice.data$id, choice.data$cond), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+
+means<-aggregate(props$prop, list(props$condition), mean)
+
+colnames(means)<-c("condition","mean.prop")
+
+tiff(file="./fig4_imitation.tiff",
+      width=6, height=6, units="in", res=300)
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), 
+     xaxt="n", xlab="", ylab="Proportion of Trials with Imitation", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+# dev.off()
+
+```
+
+
+### figure 5 - looking at screen 
+
+```{r figure 5 - looking at screen - 24-month-olds, echo = T}
+
+### get data
+
+
+# Load source scripts.
+source("h20_functions_short.r")
+
+# Load packages
+require(png)
+require(sciplot)
+require(exactRankTests)
+# load data
+load("./ET_PIP_Step1_2016-10-26.RData")
+# load table with timing of stimuli
+time.table = read.table(file="ETPIP_TIMING.txt", header=T, sep="\t")
+
+# x_left, x_right, y_up, y_down
+aoi.cup1 = c(0, 500,  960,  2280)
+aoi.cup2 = c(710, 1210,  960,  2280)
+aoi.cup3 = c(1420, 1920,  960,  2280)
+
+
+myData.combi.ver1 = c()
+myData.combi.ver2 = c()
+
+# time.window = c(1, 10*60)
+
+main.data.x.adj.cup = subset(main.data.x.adj, grepl("cup", main.data.x.adj$stimulus))
+main.data.x.adj.cup = droplevels(main.data.x.adj.cup)
+main.data.y.adj.cup = subset(main.data.y.adj, grepl("cup", main.data.y.adj$stimulus))
+main.data.y.adj.cup = droplevels(main.data.y.adj.cup)
+# main.data.x.adj.cup$stimulus = as.character(main.data.x.adj.cup$stimulus)
+
+trial.nr = rep(NA, 1, nrow(main.data.y.adj.cup))
+trial.nr[grepl("9", main.data.y.adj.cup$stimulus)] <- 1
+trial.nr[grepl("11", main.data.y.adj.cup$stimulus)] <- 2
+trial.nr[grepl("13", main.data.y.adj.cup$stimulus)] <- 3
+trial.nr[grepl("15", main.data.y.adj.cup$stimulus)] <- 4
+trial.nr[grepl("17", main.data.y.adj.cup$stimulus)] <- 5
+trial.nr[grepl("19", main.data.y.adj.cup$stimulus)] <- 6
+trial.nr[grepl("21", main.data.y.adj.cup$stimulus)] <- 7
+trial.nr[grepl("23", main.data.y.adj.cup$stimulus)] <- 8
+trial.nr[grepl("25", main.data.y.adj.cup$stimulus)] <- 9
+
+# main.data.x.adj.cup = cbind(main.data.x.adj.cup, trial.nr)
+
+for(i in 1:nrow(main.data.x.adj.cup)){
+
+	subj.x = as.integer(main.data.x.adj.cup[i,12:ncol(main.data.x.adj.cup)])
+	subj.y = as.integer(main.data.y.adj.cup[1,12:ncol(main.data.y.adj.cup)])
+	
+	subj.stim = as.character(main.data.x.adj.cup[i,]$stimulus)
+	subj.stim  = substr(subj.stim, 1, 12)	
+	
+	subj.str = c(as.character(main.data.x.adj.cup[i,1]), as.character(main.data.x.adj.cup[i,2]), as.character(main.data.x.adj.cup[i,3]), as.character(main.data.x.adj.cup[i,4]), as.character(main.data.x.adj.cup[i,5]), as.character(main.data.x.adj.cup[i,6]), as.character(main.data.x.adj.cup[i,7]), as.character(main.data.x.adj.cup[i,8]), as.character(main.data.x.adj.cup[i,9]), as.character(main.data.x.adj.cup[i,10]), as.character(main.data.x.adj.cup[i,11]))
+	
+	subj.trial = trial.nr[i]
+	
+	subj.str = c(subj.str,  as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))
+	correct.cup = as.numeric(unlist(strsplit(unlist(strsplit(unlist(strsplit(subj.str, split="_")[1])[3], split="-"))[1], split=""))[4])
+
+	# Choice
+	correct.choice <- NA
+
+	if(!is.na(as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))){
+	if(as.numeric(subj.str[12]) == correct.cup){correct.choice = 1}else if(as.numeric(subj.str[12]) != correct.cup){correct.choice = 0}}
+
+	subj.str = c(subj.str, correct.choice)
+	
+	subj.time = time.table[time.table$stim== subj.stim,]
+	
+	time.1 = c(subj.time$start_ms_abs, subj.time$att_on_ms_abs) # From start video to touch face
+	time.1 = round(time.1/1000*60)
+	
+	time.2 = c(subj.time$att_on_ms_abs, subj.time$att_off_ms_abs) # Duration touch face
+	time.2 = round(time.2/1000*60)
+	
+	time.3 = c(subj.time$att_off_ms_abs, subj.time$poi_on_ms_abs) # Move from touch face to point
+	time.3 = round(time.3/1000*60)
+
+	time.4 = c(subj.time$poi_on_ms_abs, subj.time$poi_off_ms_abs) # Extended point
+	time.4 = round(time.4/1000*60)
+
+	time.5 = c(subj.time$poi_off_ms_abs, subj.time$out_ms_abs) # Move from point to body
+	time.5 = round(time.5/1000*60)
+
+	# !!!
+	time.4[2] <- time.5[2]
+	time.4[1] <- time.1[1]
+
+	times.combi = matrix(c(time.1, time.2, time.3, time.4, time.5), nrow=2, ncol=5)
+	
+	# cup1.hit = c()
+	# cup2.hit = c()
+	# cup3.hit = c()
+	
+	time.hits.ver1 = c()
+	time.hits.ver2 = c()
+	
+	for(b in 1:ncol(times.combi)){
+		
+		time.x = subj.x[times.combi[1,b] : times.combi[2,b]]
+		time.y = subj.y[times.combi[1,b] : times.combi[2,b]]
+
+		#cup1.hit = sum(!is.na(time.x))/(sum(!is.na(time.x))+ sum(is.na(time.x)))
+		overall.hit = sum(time.x > 0 & time.x < 1920 & time.y > 0 & time.y < 2280, na.rm=T)	
+		cup1.hit = overall.hit/sum(!is.na(time.x))
+		if(overall.hit ==0){cup1.hit<-NA}
+		
+		#cup2.hit = sum(time.x > aoi.cup2[1] & time.x < aoi.cup2[2] & time.y > aoi.cup2[3] & time.y < aoi.cup2[4], na.rm=T)
+		#up3.hit = sum(time.x > aoi.cup3[1] & time.x < aoi.cup3[2] & time.y > aoi.cup3[3] & time.y < aoi.cup3[4], na.rm=T)	
+
+		# !!!
+		# cup1.hit = cup1.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup2.hit = cup2.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup3.hit = cup3.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+
+		#cup1.hit = cup1.hit/sum(c(cup1.hit, cup3.hit), na.rm=T) 
+		cup2.hit = NA # cup2.hit/sum(c(cup1.hit, cup3.hit)) 
+		cup3.hit = NA #cup3.hit/sum(c(cup1.hit, cup3.hit),na.rm=T) 
+
+		# Look
+		if(correct.cup == 1){correct.roi = cup1.hit}else if(correct.cup == 2){correct.roi = cup2.hit}else if(correct.cup == 3){correct.roi = cup3.hit}
+	
+		time.hits.ver1 = rbind(time.hits.ver1 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+		time.hits.ver2 = cbind(time.hits.ver2 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+	}
+		
+	myData.combi.ver1 = rbind(myData.combi.ver1, cbind(t(matrix(rep(subj.str, 5), nrow=13, ncol=5)), c("time1", "time2", "time3", "time4", "time5"), time.hits.ver1))
+	myData.combi.ver2 = rbind(myData.combi.ver2, cbind(t(matrix(rep(subj.str, 4), nrow=13, ncol=4)), c("cup1", "cup2", "cup3", "correct"), time.hits.ver2))
+}
+
+myData.combi.ver1 = data.frame(myData.combi.ver1)
+myData.combi.ver2 = data.frame(myData.combi.ver2)
+
+names(myData.combi.ver1) =  c("stimulus", "study", "age", "condition", "gender", "yoke_video", "version", "side", "ID", "choices", "light", "which_cup", "correct_choice", "time_win", "roi_c1", "roi_c2", "roi_c3", "roi_cor")
+
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242363")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243017")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243102")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244285") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244573")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245607") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245891")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246867")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247453")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242947")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245553")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246372")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246643")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246945")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246993")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247350")
+
+myData.combi.ver1 = droplevels(myData.combi.ver1)
+
+myData.combi.ver1$roi_c1 = as.numeric(as.character(myData.combi.ver1$roi_c1))
+myData.combi.ver1$roi_c2 = as.numeric(as.character(myData.combi.ver1$roi_c2))
+myData.combi.ver1$roi_c3 = as.numeric(as.character(myData.combi.ver1$roi_c3))
+myData.combi.ver1$roi_cor = as.numeric(as.character(myData.combi.ver1$roi_cor))
+myData.combi.ver1$correct_choice = as.numeric(as.character(myData.combi.ver1$correct_choice))
+
+################ One data point per child
+
+# Subset
+time.w4 = subset(myData.combi.ver1, time_win=="time4")
+time.w4[grepl('cup2',time.w4$stimulus),]$correct_choice <- NA
+
+trial.count = rep(NA, nrow(time.w4))
+trial.count[grepl('9',time.w4$stimulus)] <- 1
+trial.count[grepl('11',time.w4$stimulus)] <- 2
+trial.count[grepl('13',time.w4$stimulus)] <- 3
+trial.count[grepl('15',time.w4$stimulus)] <- 4
+trial.count[grepl('17',time.w4$stimulus)] <- 5
+trial.count[grepl('19',time.w4$stimulus)] <- 6
+trial.count[grepl('21',time.w4$stimulus)] <- 7
+trial.count[grepl('23',time.w4$stimulus)] <- 8
+trial.count[grepl('25',time.w4$stimulus)] <- 9
+time.w4 = cbind(trial.count, time.w4)
+
+# Double-check these:
+time.w4 = subset(time.w4, ID!="248245")
+time.w4 = subset(time.w4, ID!="248413")
+time.w4 = droplevels(time.w4)
+
+time.w4.means = as.numeric(tapply(as.numeric(time.w4 $roi_c1), time.w4 $ID, FUN=mean, na.rm =T))
+time.w4.choice = as.numeric(tapply(as.numeric(time.w4 $correct_choice), time.w4 $ID, FUN=mean, na.rm =T))
+
+# Subset with one row per child to get strings
+time.w4 = subset(time.w4, grepl("-9", time.w4 $stimulus))
+time.w4 <- time.w4[order(as.numeric(as.character(time.w4 $ID))),]
+time.w4 = cbind(time.w4, time.w4.means, time.w4.choice)
+
+
+
+### two-year-olds
+#################
+
+
+# Bubble plot
+tiff(file="./fig5_M24.tiff",
+     width=6, height=6, units="in", res=300)
+# quartz(width=10, height=5)
+# par(mfrow = c(1,2))
+time.w4.2s = subset(time.w4, age=="M24")
+time.w4.2s = droplevels(time.w4.2s)
+# get data by id and condition
+# aggregate(choice.data$corr, list(choice.data$trial, choice.data$cond), mean)
+
+# get props
+props<-aggregate(time.w4.2s $time.w4.means, list(time.w4.2s $ID, time.w4.2s $condition), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+means<-aggregate(props$prop, list(props$condition), mean, na.rm=T)
+
+colnames(means)<-c("condition","mean.prop")
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Looking at Screen", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile, na.rm=T)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+# dev.off()
+
+### three-year-olds
+####################
+
+tiff(file="./fig5_M36.tiff",
+     width=6, height=6, units="in", res=300)
+
+time.w4.2s = subset(time.w4, age=="M36")
+time.w4.2s = droplevels(time.w4.2s)
+
+# get data by id and condition
+# aggregate(choice.data$corr, list(choice.data$trial, choice.data$cond), mean)
+
+# get props
+props<-aggregate(time.w4.2s $time.w4.means, list(time.w4.2s $ID, time.w4.2s $condition), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+means<-aggregate(props$prop, list(props$condition), mean, na.rm=T)
+
+colnames(means)<-c("condition","mean.prop")
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Looking at Screen", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+#add chance line
+#abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile, na.rm=T)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+# dev.off()
+
+
+```
+
+
+
+### figure 7 - choice data ET sample - 24&36 month-olds
+
+```{r figure 7 - choice data ET sample, echo = T}
+
+### Two-year-olds
+##################
+
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials with age 24Months
+choice.data<-x.data[x.data$valid=="in" & x.data$age=="M24",]     
+
+# get only ET subsample
+choice.data<-choice.data[choice.data$ET=="ET",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get props
+props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+
+means<-aggregate(props$prop, list(props$condition), mean)
+
+colnames(means)<-c("condition","mean.prop")
+
+tiff(file="./fig7_M24_ET_subsample_choice.tiff",
+      width=6, height=6, units="in", res=300)
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Compliant Choices", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#add chance line
+abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+#add points so that they're over the gray chance line
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+#add chance line
+abline(h=1/3, col="gray81")
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+# if significant add stars
+segments(x0=1, y0=1.08, x1=2, y1=1.08, lwd=2)
+text(1.5, 1.115, "*", cex=1.5)
+
+# dev.off()
+
+
+### three-year-olds
+####################
+
+# NEW Path (06/2019) references data when in the same folder
+x.data<-read.table("./ET_PIP_data_publication.txt",sep="\t", header=T) 
+
+# get only valid trials with age 24Months
+choice.data<-x.data[x.data$valid=="in" & x.data$age=="M36",]     
+
+# get only ET subsample
+choice.data<-choice.data[choice.data$ET=="ET",]
+
+# drop levels and check exclusion
+choice.data<-droplevels(choice.data)
+
+# get props
+props<-aggregate(choice.data$corr, list(choice.data$id, choice.data$cond), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+
+means<-aggregate(props$prop, list(props$condition), mean)
+
+colnames(means)<-c("condition","mean.prop")
+
+tiff(file="./fig7_M36_ET_subsample_choice.tiff",
+      width=6, height=6, units="in", res=300)
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Compliant Choices", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#add chance line
+abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+#add points so that they're over the gray chance line
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+#add chance line
+abline(h=1/3, col="gray81")
+points(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5)
+
+# if significant add stars
+# segments(x0=1, y0=1.08, x1=2, y1=1.08, lwd=2)
+# text(1.5, 1.115, "*", cex=1.5)
+
+# dev.off()
+
+
+```
+
+
+
+
+### figure 7 - looking time data - 24&36 month-olds
+
+```{r figure 7 - looking time data, echo = T}
+
+### prepare data
+################
+
+
+# Load source scripts.
+source("h20_functions_short.r")
+
+# Load packages
+require(png)
+require(sciplot)
+require(exactRankTests)
+
+# load data
+load("./ET_PIP_Step1_2016-10-26.RData")
+
+# load table with timing of stimuli
+time.table = read.table(file="ETPIP_TIMING.txt", header=T, sep="\t")
+
+# For each subject
+# For one stimulus
+# Extract gaze data
+# Bin gaze data according to time window
+# For each time window plot and save (Gaze-path plot)
+# Number of samples in eah AOI
+
+# x_left, x_right, y_up, y_down
+aoi.cup1 = c(0, 500,  960,  2280)
+aoi.cup2 = c(710, 1210,  960,  2280)
+aoi.cup3 = c(1420, 1920,  960,  2280)
+
+myData.combi.ver1 = c()
+myData.combi.ver2 = c()
+
+# time.window = c(1, 10*60)
+
+main.data.x.adj.cup = subset(main.data.x.adj, grepl("cup", main.data.x.adj$stimulus))
+main.data.x.adj.cup = droplevels(main.data.x.adj.cup)
+main.data.y.adj.cup = subset(main.data.y.adj, grepl("cup", main.data.y.adj$stimulus))
+main.data.y.adj.cup = droplevels(main.data.y.adj.cup)
+# main.data.x.adj.cup$stimulus = as.character(main.data.x.adj.cup$stimulus)
+
+trial.nr = rep(NA, 1, nrow(main.data.y.adj.cup))
+trial.nr[grepl("9", main.data.y.adj.cup$stimulus)] <- 1
+trial.nr[grepl("11", main.data.y.adj.cup$stimulus)] <- 2
+trial.nr[grepl("13", main.data.y.adj.cup$stimulus)] <- 3
+trial.nr[grepl("15", main.data.y.adj.cup$stimulus)] <- 4
+trial.nr[grepl("17", main.data.y.adj.cup$stimulus)] <- 5
+trial.nr[grepl("19", main.data.y.adj.cup$stimulus)] <- 6
+trial.nr[grepl("21", main.data.y.adj.cup$stimulus)] <- 7
+trial.nr[grepl("23", main.data.y.adj.cup$stimulus)] <- 8
+trial.nr[grepl("25", main.data.y.adj.cup$stimulus)] <- 9
+
+# main.data.x.adj.cup = cbind(main.data.x.adj.cup, trial.nr)
+
+for(i in 1:nrow(main.data.x.adj.cup)){
+
+	subj.x = as.integer(main.data.x.adj.cup[i,12:ncol(main.data.x.adj.cup)])
+	subj.y = as.integer(main.data.y.adj.cup[1,12:ncol(main.data.y.adj.cup)])
+	
+	subj.stim = as.character(main.data.x.adj.cup[i,]$stimulus)
+	subj.stim  = substr(subj.stim, 1, 12)	
+	
+	subj.str = c(as.character(main.data.x.adj.cup[i,1]), as.character(main.data.x.adj.cup[i,2]), as.character(main.data.x.adj.cup[i,3]), as.character(main.data.x.adj.cup[i,4]), as.character(main.data.x.adj.cup[i,5]), as.character(main.data.x.adj.cup[i,6]), as.character(main.data.x.adj.cup[i,7]), as.character(main.data.x.adj.cup[i,8]), as.character(main.data.x.adj.cup[i,9]), as.character(main.data.x.adj.cup[i,10]), as.character(main.data.x.adj.cup[i,11]))
+	
+	subj.trial = trial.nr[i]
+	
+	subj.str = c(subj.str,  as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))
+	correct.cup = as.numeric(unlist(strsplit(unlist(strsplit(unlist(strsplit(subj.str, split="_")[1])[3], split="-"))[1], split=""))[4])
+
+	# Choice
+	correct.choice <- NA
+
+	if(!is.na(as.numeric(unlist(strsplit(as.character(subj.str[10]), split=""))[subj.trial]))){
+	if(as.numeric(subj.str[12]) == correct.cup){correct.choice = 1}else if(as.numeric(subj.str[12]) != correct.cup){correct.choice = 0}}
+
+	subj.str = c(subj.str, correct.choice)
+	
+	subj.time = time.table[time.table$stim== subj.stim,]
+	
+	time.1 = c(subj.time$start_ms_abs, subj.time$att_on_ms_abs) # From start video to touch face
+	time.1 = round(time.1/1000*60)
+	
+	time.2 = c(subj.time$att_on_ms_abs, subj.time$att_off_ms_abs) # Duration touch face
+	time.2 = round(time.2/1000*60)
+	
+	time.3 = c(subj.time$att_off_ms_abs, subj.time$poi_on_ms_abs) # Move from touch face to point
+	time.3 = round(time.3/1000*60)
+
+	time.4 = c(subj.time$poi_on_ms_abs, subj.time$poi_off_ms_abs) # Extended point
+	time.4 = round(time.4/1000*60)
+
+	time.5 = c(subj.time$poi_off_ms_abs, subj.time$out_ms_abs) # Move from point to body
+	time.5 = round(time.5/1000*60)
+
+	# !!!
+	# time.4[2] <- time.5[2]
+	# time.4[1] <- time.3[1]
+
+	times.combi = matrix(c(time.1, time.2, time.3, time.4, time.5), nrow=2, ncol=5)
+	
+	# cup1.hit = c()
+	# cup2.hit = c()
+	# cup3.hit = c()
+	
+	time.hits.ver1 = c()
+	time.hits.ver2 = c()
+	
+	for(b in 1:ncol(times.combi)){
+		
+		time.x = subj.x[times.combi[1,b] : times.combi[2,b]]
+		time.y = subj.y[times.combi[1,b] : times.combi[2,b]]
+
+		cup1.hit = sum(time.x > aoi.cup1[1] & time.x < aoi.cup1[2] & time.y > aoi.cup1[3] & time.y < aoi.cup1[4], na.rm=T)
+		cup2.hit = sum(time.x > aoi.cup2[1] & time.x < aoi.cup2[2] & time.y > aoi.cup2[3] & time.y < aoi.cup2[4], na.rm=T)
+		cup3.hit = sum(time.x > aoi.cup3[1] & time.x < aoi.cup3[2] & time.y > aoi.cup3[3] & time.y < aoi.cup3[4], na.rm=T)	
+
+		# !!!
+		# cup1.hit = cup1.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup2.hit = cup2.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+		# cup3.hit = cup3.hit/sum(c(cup1.hit, cup2.hit, cup3.hit), na.rm=T) 
+
+		cup1.hit = cup1.hit/sum(c(cup1.hit, cup3.hit), na.rm=T) 
+		cup2.hit = NA # cup2.hit/sum(c(cup1.hit, cup3.hit)) 
+		cup3.hit = cup3.hit/sum(c(cup1.hit, cup3.hit),na.rm=T) 
+
+		# Look
+		if(correct.cup == 1){correct.roi = cup1.hit}else if(correct.cup == 2){correct.roi = cup2.hit}else if(correct.cup == 3){correct.roi = cup3.hit}
+	
+		time.hits.ver1 = rbind(time.hits.ver1 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+		time.hits.ver2 = cbind(time.hits.ver2 , c(cup1.hit, cup2.hit, cup3.hit, correct.roi))
+	}
+		
+	myData.combi.ver1 = rbind(myData.combi.ver1, cbind(t(matrix(rep(subj.str, 5), nrow=13, ncol=5)), c("time1", "time2", "time3", "time4", "time5"), time.hits.ver1))
+	myData.combi.ver2 = rbind(myData.combi.ver2, cbind(t(matrix(rep(subj.str, 4), nrow=13, ncol=4)), c("cup1", "cup2", "cup3", "correct"), time.hits.ver2))
+}
+
+myData.combi.ver1 = data.frame(myData.combi.ver1)
+myData.combi.ver2 = data.frame(myData.combi.ver2)
+
+names(myData.combi.ver1) =  c("stimulus", "study", "age", "condition", "gender", "yoke_video", "version", "side", "ID", "choices", "light", "which_cup", "correct_choice", "time_win", "roi_c1", "roi_c2", "roi_c3", "roi_cor")
+
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242363")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243017")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="243102")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244285") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="244573")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245607") # Nur Reli grenzwertig
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245891")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246867")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247453")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="242947")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="245553")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246372")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246643")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246945")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="246993")
+myData.combi.ver1 = subset(myData.combi.ver1, ID!="247350")
+
+myData.combi.ver1 = droplevels(myData.combi.ver1)
+
+myData.combi.ver1$roi_c1 = as.numeric(as.character(myData.combi.ver1$roi_c1))
+myData.combi.ver1$roi_c2 = as.numeric(as.character(myData.combi.ver1$roi_c2))
+myData.combi.ver1$roi_c3 = as.numeric(as.character(myData.combi.ver1$roi_c3))
+myData.combi.ver1$roi_cor = as.numeric(as.character(myData.combi.ver1$roi_cor))
+myData.combi.ver1$correct_choice = as.numeric(as.character(myData.combi.ver1$correct_choice))
+
+# # plot.data = subset(myData.combi.ver1, time_win=="time4"  & age=="M24" & grepl("-9", stimulus))
+# par(mfrow=c(1,2))
+# plot.data = subset(myData.combi.ver1, time_win=="time4"  & age=="M24")
+# bargraph.CI(correct_choice, roi_cor, condition, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="M24 Looking Time Correct / Incorrect", ylim=c(0,1))
+# abline(h=1/3)
+# plot.data = subset(myData.combi.ver1, time_win=="time4"  & age=="M36")
+# bargraph.CI(correct_choice, roi_cor, condition, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="M36 Looking Time Correct / Incorrect", ylim=c(0,1))
+# abline(h=1/3)
+# 
+# plot.data = subset(myData.combi.ver1, time_win=="time4")
+# bargraph.CI(correct_choice, roi_cor, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="Looking Time Correct / Incorrect", ylim=c(0,1))
+# abline(h=1/3)
+
+# 
+# 
+# plot.data = subset(myData.combi.ver1, time_win=="time4")
+# bargraph.CI(age, roi_cor, condition, legend=T, data = plot.data, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="Looking Time Correct / Incorrect", ylim=c(0,1))
+
+write.table(myData.combi.ver1 , file="ETPIP_time_all_ver.txt", sep="\t", col.names=T, row.names=F) 
+write.table(myData.combi.ver2 , file="ETPIP_time_all_ver2.txt", sep="\t", col.names=T, row.names=F) 
+
+# plot(myData.combi.ver1 $roi_cor, myData.combi.ver1 $correct_choice)
+
+# myData.combi.ver1[myData.combi.ver1$correct_choice==1 & !is.na(myData.combi.ver1$correct_choice),]$roi_cor <- NA
+
+time.w4 = subset(myData.combi.ver1, time_win=="time4")
+trial.count = rep(NA, nrow(time.w4))
+trial.count[grepl('9',time.w4$stimulus)] <- 1
+trial.count[grepl('11',time.w4$stimulus)] <- 2
+trial.count[grepl('13',time.w4$stimulus)] <- 3
+trial.count[grepl('15',time.w4$stimulus)] <- 4
+trial.count[grepl('17',time.w4$stimulus)] <- 5
+trial.count[grepl('19',time.w4$stimulus)] <- 6
+trial.count[grepl('21',time.w4$stimulus)] <- 7
+trial.count[grepl('23',time.w4$stimulus)] <- 8
+trial.count[grepl('25',time.w4$stimulus)] <- 9
+time.w4 = cbind(trial.count, time.w4)
+
+# Double-check these:
+time.w4 = subset(time.w4, ID!="248245")
+time.w4 = subset(time.w4, ID!="248413")
+
+time.w4 = droplevels(time.w4)
+write.table(time.w4 , file="ET_PIP_data_EYE.txt", sep="\t", col.names=T, row.names=F) 
+
+#time.w4 = subset(time.w4, !is.na(roi_cor))
+#time.w4 = subset(time.w4, !is.na(correct_choice))
+time.w4.means = as.numeric(tapply(as.numeric(time.w4 $roi_cor), time.w4 $ID, FUN=mean, na.rm =T))
+time.w4.choice = as.numeric(tapply(as.numeric(time.w4 $correct_choice), time.w4 $ID, FUN=mean, na.rm =T))
+time.w4 = subset(time.w4, grepl("-9", time.w4 $stimulus))
+time.w4 <- time.w4[order(as.numeric(as.character(time.w4 $ID))),]
+time.w4 = cbind(time.w4, time.w4.means, time.w4.choice)
+
+# #par(mfrow=c(1,4))
+# bargraph.CI(age, time.w4.means, condition, legend=T, data = time.w4, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="All cups", ylim=c(0,1))
+# abline(h=0.5)
+
+write.table(time.w4.means , file="averaged_table.txt", sep="\t", col.names=T, row.names=F) 
+
+# stime.w4
+
+# par(mfrow=c(1,2))
+# bargraph.CI(age, time.w4.means, condition, legend=T, data = subset(time.w4, fun = function(x) mean(x, na.rm=T),lc=T, uc=T, main="All cups", ylim=c(0,1))
+# abline(h=0.5)
+
+
+### two-year-olds
+#################
+
+tiff(file="./fig7_M24_looking time data.tiff",
+     width=6, height=6, units="in", res=300)
+
+# get M24
+time.w4.2s = subset(time.w4, age=="M24")
+time.w4.2s = droplevels(time.w4.2s)
+
+# get props
+props<-aggregate(time.w4.2s $time.w4.means, list(time.w4.2s $ID, time.w4.2s $condition), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+means<-aggregate(props$prop, list(props$condition), mean, na.rm=T)
+
+colnames(means)<-c("condition","mean.prop")
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Looking at Correct AOI", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#add chance line
+#abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile, na.rm=T)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+
+
+### three-year-olds
+####################
+
+tiff(file="./fig7_M36_looking time data.tiff",
+     width=6, height=6, units="in", res=300)
+
+# get M36
+time.w4.2s = subset(time.w4, age=="M36")
+time.w4.2s = droplevels(time.w4.2s)
+
+# get props
+props<-aggregate(time.w4.2s $time.w4.means, list(time.w4.2s $ID, time.w4.2s $condition), mean)
+colnames(props)<-c("id","condition","prop")
+props.to.plot<-data.frame(table(props$prop, props$condition))
+colnames(props.to.plot)<-c("prop","condition","freq")
+props.to.plot$prop<-as.numeric(as.character(props.to.plot$prop))
+means<-aggregate(props$prop, list(props$condition), mean, na.rm=T)
+
+colnames(means)<-c("condition","mean.prop")
+
+plot(as.numeric(props.to.plot$condition), props.to.plot$prop, cex=sqrt(props.to.plot$freq)*1.5, xlim=c(0.5, 2.5), ylim=c(0,1.1), xaxt="n", xlab="", ylab="Proportion of Looking at Correct AOI", las=1)
+axis(side=1, at=1:2, labels=c("Adult","Peer"), tick=F)
+segments(x0=c(0.85,1.85), y0=means$mean.prop, x1=c(1.15,2.15), y1=means$mean.prop, lwd=2, lty=2)
+
+#add chance line
+#abline(h=1/3, col="gray81", lwd=2)
+
+#get quartiles
+quartiles<-aggregate(props$prop, list(props$condition), quantile, na.rm=T)
+
+#add median
+segments(x0=c(0.85,1.85), y0=quartiles$x[,"50%"], x1=c(1.15,2.15), y1=quartiles$x[,"50%"], lwd=2)
+
+#add 25th and 75th percentile box
+rect(xleft=c(0.85,1.85), xright=c(1.15,2.15), ybottom=quartiles$x[,"25%"], ytop=quartiles$x[,"75%"])
+
+
+```
+
+
+
+
+# References
+

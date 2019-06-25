@@ -1,0 +1,841 @@
+nr	slot	ET	age_number	study	age	cond	sex	video	yoke	left_right	id	agem	aged	trial	min	sec	hide	choice	corr	valid	imitation	imi_what	imitator	daycare	oldersibs	sibs	sib_age1	sib_age2	sib_age3	friends	q1a	q1b	q2	q3	q4	q5	q6	q6_rev	q7	peer_mean
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	1	5	3	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	2	5	50	1	2	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	3	6	35	3	2	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	4	7	25	1	2	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	5	8	4	3	1	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	6	8	50	2	1	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	7	9	35	1	2	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	8	10	30	2	1	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+1	1		26	ETPIP	M24	peer	1	boy1	m1	lef	8864388	26	808	9	11	30	3	1	0	in	0	0	0	1	1	1	5	na	na	1	40	84	5	5	5	5	2	4	4	4,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	1	4	20	1	1	1	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	2	5	0	3	1	0	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	3	5	40	2	2	1	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	4	6	17	3	2	0	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	5	6	55	1	2	0	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	6	7	40	2	2	1	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	7	8	14	1	2	0	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	8	8	55	2	2	1	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+13	2	ET	25	ETPIP	M24	peer	1	boy1	m1	rig	8981280	25	789	9	9	30	3	2	0	in	0	0	0	1	1	1	5	0	0	1	30	50	4	5	3	4	3	3	3	3,666666667
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	1	4	10	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	2	5	0	3	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	3	5	45	2	2	1	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	4	6	25	3	3	1	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	5	7	10	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	6	7	55	2	2	1	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	7	8	35	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	8	9	25	3	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+5	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8869392	26	796	9	10	0	2	2	1	in	0	0	0	1	0	0	na	na	na	1	30	0	3	3	4	4	4	2	2	3
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	1	3	25	1	1	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	2	4	10	3	3	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	3	4	50	2	2	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	4	5	10	1	1	1	in	1	att	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	5	6	10	2	2	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	6	7	0	3	3	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	7	7	30	1	1	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	8	8	10	2	2	1	in	1	att	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+17	4	ET	25	ETPIP	M24	peer	1	boy2	m2	rig	8822520	25	785	9	8	48	3	3	1	in	0	0	1	1	1	1	4	na	na	1	40	50	4	5	5	5	2	4	5	4,666666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	1	5	15	3	2	0	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	2	6	6	1	2	0	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	3	6	45	2	2	1	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	4	7	46	1	2	0	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	5	8	12	2	2	1	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	6	8	48	3	2	0	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	7	9	35	1	2	0	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	8	10	40	2	2	1	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8833752	26	801	9	11	45	3	2	0	in	0	0	0	0	1	1	4	na	na	1	8	8	4	5	5	5	3	3	3	4,166666667
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	1	4	30	3	2	0	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	2	5	5	2	2	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	3	5	40	1	1	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	4	6	30	3	3	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	5	7	5	1	1	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	6	7	40	2	2	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	7	8	10	3	3	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	8	8	55	2	2	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+21	6	ET	25	ETPIP	M24	peer	1	boy3	m3	rig	8861796	25	767	9	9	34	1	1	1	in	0	0	0	1	1	1	7	na	na	1	40	0	5	5	4	4	2	4	4	4,333333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	1	5	5	2	1	0	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	3	6	30	3	1	0	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	4	7	20	1	1	1	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	5	8	3	2	1	0	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	6	8	45	3	2	0	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	7	9	33	1	2	0	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+2	7		25	ETPIP	M24	adul	1	man1	m1	lef	8852076	25	777	8	10	25	3	1	0	in	0	0	0	0	0	0	na	na	na	1	7	2	4	5	5	3	3	3	3	3,833333333
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	1	6	45	2	2	1	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	2	7	30	3	1	0	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	3	8	0	1	1	1	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	4	8	40	2	1	0	in	1	point	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	5	9	20	3	2	0	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	6	10	0	1	3	0	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	7	10	40	3	2	0	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	8	11	30	1	3	0	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+14	8		26	ETPIP	M24	adul	1	man1	m1	rig	8841852	26	800	9	12	10	2	1	0	in	0	0	1	1	1	1	11	na	na	1	37	7	3	5	4	4	3	3	2	3,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	1	4	27	1	2	0	in	0	0	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	2	5	0	3	2	0	in	0	0	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	3	5	45	2	2	1	in	0	0	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	4	6	25	1	2	0	in	0	0	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	5	7	0	2	2	1	in	0	0	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	6	7	40	3	3	1	in	1	point	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	7	8	20	1	1	1	in	1	point	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	8	8	55	3	3	1	in	1	point	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8794260	26	817	9	9	30	2	2	1	in	0	0	1	1	1	1	5	na	na	1	56	84	4	5	4	5	2	4	5	4,5
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	1	5	40	1	2	0	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	2	6	30	2	2	1	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	3	7	13	3	3	1	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	4	7	55	2	2	1	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	5	8	40	1	2	0	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	6	9	20	3	3	1	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	7	10	0	1	1	1	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	8	10	40	3	2	0	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+18	10		26	ETPIP	M24	adul	1	man2	m2	rig	8839908	26	794	9	11	15	2	2	1	in	0	0	0	1	1	3	11	6	4	1	40	80	3	5	4	5	3	3	5	4,166666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	1	6	22	2	2	1	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	2	7	0	1	1	1	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	3	7	40	3	1	0	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	4	8	10	2	3	0	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	5	8	55	3	3	1	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	6	9	40	1	3	0	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	7	10	20	2	2	1	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	8	10	55	1	2	0	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+10	11		25	ETPIP	M24	adul	1	man3	m3	lef	8818236	25	778	9	11	34	3	3	1	in	0	0	0	1	1	2	8	0,5	na	1	30	3	4	4	4	5	4	2	3	3,666666667
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	1	11	30	2	2	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	2	12	13	1	1	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	3	12	52	3	3	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	4	13	30	2	2	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	5	14	16	3	2	0	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	6	14	50	1	1	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	7	15	40	2	2	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+22	12		26	ETPIP	M24	adul	1	man3	m3	rig	8839296	26	800	8	16	15	1	1	1	in	0	0	0	1	1	2	7	3	na	1	50	30	5	5	5	4	2	4	4	4,5
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	1	4	5	2	2	1	in	0	0	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	2	4	44	1	1	1	in	1	point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	3	5	15	3	3	1	in	1	att&point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	4	5	49	1	1	1	in	1	att&point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	5	6	23	3	3	1	in	0	0	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	6	6	58	2	2	1	in	1	att&point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	7	7	44	1	1	1	in	1	att&point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	8	8	25	2	2	1	in	1	att&point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+3	13	ET	26	ETPIP	M24	peer	0	gir1	f1	lef	8839944	26	809	9	9	0	3	3	1	in	1	att&point	1	1	1	1	4	na	na	1	30	84	4	5	5	5	3	3	3	4,166666667
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	1	3	20	1	2	0	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	2	4	0	2	3	0	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	3	4	30	3	2	0	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	4	5	10	2	2	1	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	5	5	50	1	2	0	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	6	6	29	3	1	0	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	7	7	15	1	1	1	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	8	7	50	2	2	1	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+15	14		26	ETPIP	M24	peer	0	gir1	f1	rig	8804628	26	794	9	8	25	3	2	0	in	0	0	0	1	1	1	4	na	na	1	35	30	4	4	3	4	3	3	2	3,333333333
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	1	5	32	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	2	6	3	1	1	1	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	3	6	50	3	3	1	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	4	7	26	2	1	0	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	6	8	40	3	3	1	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	7	9	25	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+7	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8833572	26	794	8	10	5	1	1	1	in	0	0	0	1	1	1	5	na	na	1	40	50	4	5	4	5	3	3	4	4,166666667
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	1	4	40	1	2	0	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	2	5	10	2	1	0	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	4	6	25	2	3	0	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	5	7	0	1	1	1	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	6	7	40	3	2	0	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	7	8	50	1	2	0	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	8	9	40	3	2	0	in	0	0	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+19	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8837568	26	791	9	10	10	2	2	1	in	1	att&point	1	1	1	1	5	na	na	1	35	35	4	5	3	4	3	3	2	3,5
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	1	4	45	2	3	0	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	4	7	16	2	2	1	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	5	7	51	3	3	1	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	6	8	35	1	1	1	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	7	9	8	2	2	1	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	8	9	50	3	3	1	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+11	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8852832	26	815	9	10	30	1	2	0	in	0	0	0	0	0	1	0,3	na	na	1	4	4	3	4	4	3	5	1	2	2,833333333
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	1	5	52	3	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	2	6	42	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	4	8	15	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	6	9	50	2	3	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	7	10	50	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	8	11	37	3	2	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+23	18	ET	25	ETPIP	M24	peer	0	gir3	f3	rig	8821764	25	789	9	12	20	2	3	0	in	0	0	0	1	0	0	na	na	na	1	30	0	5	5	4	4	3	3	4	4,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	1	5	37	3	3	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	2	6	19	1	1	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	3	6	58	2	2	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	4	7	45	1	1	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	5	8	20	3	3	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	6	8	55	2	2	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	7	9	33	3	2	0	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	8	10	55	2	2	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+4	19	ET	25	ETPIP	M24	adul	0	wom1	f1	lef	8870328	25	789	9	11	33	1	1	1	in	0	0	0	1	0	0	na	na	na	1	38	0	3	4	4	4	4	2	2	3,166666667
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	1	5	45	1	1	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	2	6	20	2	2	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	3	7	0	3	3	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	4	7	40	2	2	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	5	8	15	1	1	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	6	8	40	3	3	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	7	9	30	1	1	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	8	10	20	3	3	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+16	20	ET	26	ETPIP	M24	adul	0	wom1	f1	rig	8858520	26	802	9	11	0	2	2	1	in	0	0	0	1	0	0	na	na	na	1	35	0	4	5	5	5	2	4	4	4,5
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	1	4	0	1	1	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	2	4	45	2	1	0	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	3	5	15	3	3	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	4	5	57	2	2	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	5	6	31	3	3	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	6	7	14	1	1	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	7	7	53	2	2	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+8	21	ET	25	ETPIP	M24	adul	0	wom2	f2	lef	8825256	25	777	9	9	20	1	1	1	in	0	0	0	1	0	0	na	na	na	1	45	15	5	5	5	4	3	3	4	4,333333333
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	1	6	0	1	2	0	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	2	6	40	3	3	1	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	3	7	30	2	2	1	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	4	8	13	3	3	1	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	5	8	50	2	3	0	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	6	9	33	1	2	0	in	1	att	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	7	10	33	3	2	0	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	8	11	0	2	2	1	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+20	22		25	ETPIP	M24	adul	0	wom2	f2	rig	8842680	25	784	9	12	0	1	2	0	in	0	0	1	0	1	3	6	8	8	0	0	0	na	na	na	na	na	n5	na	na
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	1	4	44	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	2	5	42	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	3	6	36	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	4	7	23	1	2	0	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	5	8	6	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	6	8	55	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	7	9	50	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	8	10	41	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+12	23	ET	25	ETPIP	M24	adul	0	wom3	f3	lef	8818056	25	762	9	11	20	1	2	0	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	5	2	4	4	4,5
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	1	5	0	2	2	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	2	5	30	3	2	0	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	3	6	10	1	1	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	4	6	50	3	3	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	5	7	25	2	2	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	6	8	5	1	1	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	7	8	45	3	3	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	8	9	18	2	2	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+24	24	ET	26	ETPIP	M24	adul	0	wom3	f3	rig	8854200	26	792	9	10	5	1	1	1	in	0	0	0	0	1	2	11	9	na	0	0	0	na	na	na	na	na	n5	na	na
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	1	5	50	2	2	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	2	6	20	1	1	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	3	7	25	3	3	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	4	7	40	1	1	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	5	8	12	3	3	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	6	8	53	2	2	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	7	9	27	1	1	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	8	10	5	2	2	1	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	1	ET	38	ETPIP	M36	peer	1	boy1	m1	lef	8764236	38	1176	9	10	45	3	2	0	in	0	0	0	1	1	1	1	na	na	1	na	45	3	5	4	4	3	3	3	3,666666667
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	1	5	51	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	2	6	36	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	3	7	8	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	4	7	50	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	5	8	30	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	6	9	20	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	7	9	55	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	8	10	45	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	2	ET	38	ETPIP	M36	peer	1	boy1	m1	rig	8755884	38	1159	9	11	25	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	50	3	5	4	4	4	2	2	3,333333333
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	1	6	0	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	2	6	33	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	3	7	5	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	4	7	35	3	3	1	in	1	att	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	5	8	18	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	6	8	45	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	7	9	28	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	8	10	15	3	3	1	in	1	point	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	3	ET	37	ETPIP	M36	peer	1	boy2	m2	lef	8724924	37	1152	9	10	52	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	na	4	4	4	2	2	3
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	1	4	10	1	1	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	2	4	40	3	3	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	3	5	26	2	2	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	4	6	0	1	1	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	5	6	30	2	2	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	6	7	0	3	3	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	7	7	40	1	1	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	8	8	18	2	2	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	4	ET	37	ETPIP	M36	peer	1	boy2	m2	rig	8728884	37	1148	9	8	45	3	3	1	in	0	0	0	1	0	1	0,3	na	na	1	na	45	3	4	4	4	3	3	2	3,333333333
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	1	6	35	3	3	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	2	7	5	1	1	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	3	7	36	2	2	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	4	8	12	3	3	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	5	8	40	2	2	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	6	9	15	3	2	0	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	7	9	50	1	1	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	8	10	27	2	2	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	5	ET	38	ETPIP	M36	peer	1	boy3	m3	lef	8745732	38	1164	9	11	3	3	3	1	in	0	0	0	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	1	6	55	3	2	0	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	2	7	30	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	3	8	0	1	2	0	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	4	8	33	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	5	9	8	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	6	9	42	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	7	10	10	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	8	10	50	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8751672	37	1142	9	11	25	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	35	5	5	5	3	3	3	3	4
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	1	4	20	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	2	4	55	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	3	5	35	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	4	6	5	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	5	6	40	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	6	7	10	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	7	8	3	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	8	8	35	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	7	ET	37	ETPIP	M36	adul	1	man1	m1	lef	8788032	37	1132	9	9	10	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	45	4	5	5	4	4	2	2	3,666666667
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	1	5	14	2	2	1	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	2	5	40	3	3	1	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	3	6	10	1	1	1	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	4	6	44	2	2	1	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	5	7	37	3	3	1	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	6	8	10	2	1	0	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	7	8	40	3	3	1	in	1	att	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	8	9	15	1	2	0	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	8		38	ETPIP	M36	adul	1	man1	m1	rig	8746092	38	1173	9	9	49	2	2	1	in	0	0	1	1	0	1	1	na	na	1	na	35	3	5	5	4	2	4	3	4
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	1	4	10	1	1	1	in	0	0	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	2	4	48	3	3	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	3	5	36	2	2	1	in	0	0	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	4	6	0	1	1	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	5	6	30	2	2	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	6	7	10	3	3	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	7	7	50	1	1	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	8	8	30	3	3	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8790120	38	1182	9	9	10	2	2	1	in	1	point	1	1	1	1	5	na	na	1	na	77	4	5	4	5	3	3	4	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	1	6	50	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	2	7	24	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	3	7	56	3	3	1	in	1	point	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	4	8	32	2	2	1	in	1	point	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	5	9	2	1	1	1	in	1	point	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	6	9	40	3	3	1	in	1	att&point	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	7	10	20	1	1	1	in	1	point	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	10	ET	37	ETPIP	M36	adul	1	man2	m2	rig	8737632	37	1153	8	11	0	3	3	1	in	1	point	1	1	0	0	na	na	na	1	na	40	4	5	5	4	2	4	3	4,166666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	1	4	20	2	2	1	in	1	point	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	2	4	55	1	2	0	in	0	0	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	3	5	35	3	3	1	in	1	point	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	4	6	19	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	5	6	56	3	2	0	in	0	0	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	6	7	35	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	7	8	5	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	11	ET	38	ETPIP	M36	adul	1	man3	m3	lef	8779968	38	1181	9	10	32	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	35	4	5	4	3	3	3	3	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	1	9	15	2	2	1	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	2	9	41	1	1	1	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	3	10	15	3	2	0	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	4	10	47	2	2	1	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	5	11	30	3	2	0	in	1	att	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	6	11	50	1	1	1	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	7	11	25	2	2	1	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	12		37	ETPIP	M36	adul	1	man3	m3	rig	8766396	37	1154	8	12	55	1	2	0	in	0	0	1	1	0	1	0.5	na	na	1	na	45	3	4	4	4	3	3	4	3,666666667
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	1	4	35	2	2	1	in	0	0	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	2	5	0	1	1	1	in	0	0	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	3	5	55	3	3	1	in	1	point	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	4	6	30	1	1	1	in	0	0	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	5	7	0	3	3	1	in	1	point	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	6	7	40	2	2	1	in	1	point	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	7	8	22	1	1	1	in	0	0	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	8	8	50	2	2	1	in	1	att&point	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8724816	38	1162	9	9	30	3	3	1	in	1	att&point	1	1	1	2	5	0.5	na	1	na	84	4	5	5	5	3	3	4	4,333333333
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	1	5	55	1	2	0	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	2	6	30	2	2	1	in	1	att	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	3	7	0	3	3	1	in	1	att	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	4	7	40	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	5	8	13	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	6	8	40	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	7	9	15	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	8	9	50	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	14		38	ETPIP	M36	peer	0	gir1	f1	rig	8776692	38	1164	9	10	21	3	2	0	in	0	0	1	1	0	0	na	na	na	1	na	40	3	4	4	4	2	4	3	3,666666667
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	1	7	35	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	2	8	35	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	3	9	8	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	4	9	45	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	5	10	20	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	6	10	50	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	7	11	45	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	8	12	20	1	2	0	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	15		38	ETPIP	M36	peer	0	gir2	f2	lef	8729928	38	1175	9	12	44	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	45	4	4	4	3	3	3	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	1	7	27	1	2	0	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	2	7	55	2	2	1	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	3	8	25	3	2	0	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	4	9	0	2	2	1	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	5	9	30	1	2	0	in	0	0	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	6	10	24	3	2	0	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	7	10	55	1	3	0	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	8	11	46	3	3	1	in	1	att	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	16	ET	37	ETPIP	M36	peer	0	gir2	f2	rig	8780040	37	1152	9	12	18	2	2	1	in	1	point	1	1	0	0	na	na	na	1	na	40	3	5	5	3	4	2	2	3,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	2	9	43	1	2	0	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	3	10	20	3	1	0	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	4	11	0	2	1	0	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	5	11	55	3	1	0	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	6	12	32	1	1	1	in	1	att	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	7	13	5	2	1	0	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	8	13	40	3	2	0	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	17		37	ETPIP	M36	peer	0	gir3	f3	lef	8781516	37	1149	9	14	25	1	1	1	in	0	0	1	1	1	1	0.5	na	na	1	na	35	5	5	5	4	2	4	3	4,333333333
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	1	5	14	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	2	6	9	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	3	6	44	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	4	7	20	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	5	8	0	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	6	8	30	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	7	9	4	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	8	9	40	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8765352	38	1160	9	10	10	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	30	2	4	5	2	5	1	1	2,5
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	1	6	50	3	3	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	2	7	20	1	1	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	3	7	55	2	2	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	4	8	30	1	1	1	in	1	att	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	5	9	15	3	3	1	in	1	att	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	6	9	55	2	2	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	7	10	30	3	3	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	8	10	50	2	2	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	19	ET	38	ETPIP	M36	adul	0	wom1	f1	lef	8753004	38	1169	9	11	40	1	1	1	in	0	0	1	1	1	1	6	na	na	1	na	45	4	5	4	4	3	3	4	4
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	1	6	2	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	2	6	35	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	3	7	0	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	4	7	35	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	5	8	0	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	6	8	30	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	7	9	0	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	20		37	ETPIP	M36	adul	0	wom1	f1	rig	8753148	37	1148	8	9	35	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	4	4	4	4	2	2	3,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	1	5	30	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	2	6	0	2	1	0	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	3	6	45	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	4	7	14	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	5	7	55	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	6	8	30	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	7	9	15	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	8	9	55	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8748612	38	1179	9	10	35	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	50	4	5	4	4	2	4	4	4,166666667
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	1	7	55	1	1	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	2	8	30	3	3	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	3	8	57	2	2	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	4	9	30	3	3	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	5	10	0	2	2	1	in	1	att	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	6	10	35	1	1	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	7	11	10	3	3	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	8	11	44	2	2	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	22	ET	37	ETPIP	M36	adul	0	wom2	f2	rig	8682336	37	1145	9	12	20	1	1	1	in	0	0	1	1	1	1	10	na	na	1	na	25	2	3	4	3	4	2	1	2,5
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	1	5	50	1	2	0	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	2	6	35	3	2	0	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	3	7	10	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	4	7	52	1	2	0	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	5	8	34	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	6	9	14	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	7	9	50	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	8	10	36	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8729964	38	1179	9	12	20	1	2	0	in	0	0	0	1	0	1	1	na	na	1	na	60	4	4	5	4	1	5	4	4,333333333
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	1	7	30	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	2	8	10	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	3	8	44	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	4	9	21	3	2	0	in	1	point	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	5	10	3	2	2	1	in	1	point	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	6	10	36	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	7	11	26	3	2	0	in	1	point	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	8	12	0	2	2	1	in	1	point	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	24	ET	37	ETPIP	M36	adul	0	wom3	f3	rig	8768988	37	1141	9	12	50	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	50	4	5	5	2	2	4	4	4
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	1	4	15	2	1	0	in	0	0	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	2	4	54	1	2	0	in	0	0	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	3	5	25	3	3	1	in	1	att	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	4	6	10	1	1	1	in	1	att&point	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	5	6	40	3	3	1	in	1	att&point	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	6	7	15	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	7	8	4	1	1	1	in	1	point	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	8	8	35	2	2	1	in	0	0	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	1		25	ETPIP	M24	peer	1	boy1	m1	lef	8890020	25	775	9	9	10	3	3	1	in	0	0	1	1	0	0	na	na	na	1	20	0	5	5	5	4	2	4	4	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	1	4	12	1	3	0	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	2	4	50	3	2	0	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	3	5	20	2	2	1	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	4	6	4	3	2	0	in	1	att	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	5	6	40	1	2	0	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	6	7	20	2	2	1	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	7	8	0	1	2	0	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	8	8	37	2	2	1	in	1	att	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	2		26	ETPIP	M24	peer	1	boy1	m1	rig	8904600	26	808	9	9	13	3	2	0	in	0	0	1	1	0	0	na	na	na	1	35	3	5	5	5	5	2	4	3	4,5
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	1	5	50	1	2	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	2	6	40	3	2	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	3	7	13	2	2	1	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	4	8	0	3	2	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	5	8	44	1	2	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	6	9	30	2	2	1	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	7	10	18	1	2	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	8	11	5	3	1	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	3		26	ETPIP	M24	peer	1	boy2	m2	lef	8919756	26	813	9	12	0	2	1	0	in	0	0	0	1	1	1	6	na	na	1	40	10	4	5	5	4	2	4	3	4,166666667
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	1	5	15	1	2	0	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	2	5	47	3	3	1	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	3	6	35	2	2	1	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	4	7	10	1	2	0	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	5	7	45	2	2	1	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	6	8	25	3	3	1	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	8	9	5	2	2	1	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	4		25	ETPIP	M24	peer	1	boy2	m2	rig	8881164	25	777	9	9	40	3	3	1	in	0	0	0	1	1	3	4	7	10	1	35	40	4	5	4	4	2	4	3	4
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	1	4	20	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	2	5	0	1	2	0	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	3	5	35	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	4	6	10	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	5	6	45	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	6	7	20	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	7	8	0	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	8	8	40	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	5	ET	26	ETPIP	M24	peer	1	boy3	m3	lef	8885628	26	808	9	9	25	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	10	4	5	3	4	3	3	2	3,5
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	1	7	20	3	2	0	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	2	8	0	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	3	8	35	1	2	0	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	4	9	8	3	2	0	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	5	9	40	1	2	0	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	6	10	20	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	7	11	0	3	2	0	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	6	ET	26	ETPIP	M24	peer	1	boy3	m3	rig	8833896	26	814	8	11	45	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	40	5	5	5	5	3	3	3	4	4,166666667
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	1	4	50	1	1	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	2	5	40	2	2	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	3	6	20	3	3	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	4	7	6	1	1	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	5	7	40	2	2	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	6	8	14	3	3	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	7	8	50	1	1	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	8	9	5	3	3	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	7	ET	26	ETPIP	M24	adul	1	man1	m1	lef	8892936	26	802	9	10	5	2	2	1	in	0	0	0	1	0	1	0,2	na	na	1	40	10	4	5	4	3	4	2	2	3,333333333
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	1	4	21	2	2	1	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	2	5	11	3	2	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	3	5	49	1	2	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	4	6	20	2	1	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	5	7	0	3	1	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	6	7	35	1	2	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	7	8	27	3	2	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	8	9	0	1	2	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	8	ET	26	ETPIP	M24	adul	1	man1	m1	rig	8835264	26	808	9	9	40	2	1	0	in	0	0	0	1	0	1	0,2	na	na	1	40	5	4	4	4	3	3	3	3	3,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	1	4	5	1	2	0	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	2	4	50	3	3	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	3	5	25	2	2	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	4	6	14	1	1	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	5	6	50	2	2	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	6	7	24	3	3	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	7	8	4	1	1	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	8	8	40	3	1	0	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	9		26	ETPIP	M24	adul	1	man2	m2	lef	8887212	26	807	9	9	24	2	2	1	in	0	0	0	1	0	0	na	na	na	0	40	0	4	5	5	3	1	5	5	4,5
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	1	5	50	1	1	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	2	6	50	2	2	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	3	7	20	3	2	0	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	4	7	55	2	3	0	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	5	8	40	1	1	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	6	9	25	3	3	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	7	10	0	1	1	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	8	10	40	3	3	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	10		26	ETPIP	M24	adul	1	man2	m2	rig	8905968	26	811	9	11	20	2	2	1	in	0	0	0	1	0	0	na	na	na	1	45	5	3	5	5	4	3	3	3	3,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	1	4	35	1	1	1	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	2	5	24	2	2	1	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	3	6	0	3	3	1	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	4	6	30	2	2	1	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	5	7	5	3	3	1	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	6	7	40	1	1	1	in	1	point	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	7	8	7	2	2	1	in	1	point	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	8	9	0	1	2	0	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	11	ET	26	ETPIP	M24	adul	1	man3	m3	lef	8851680	26	813	9	9	30	3	3	1	in	0	0	1	1	0	0	na	na	na	1	50	50	5	5	5	5	2	4	5	4,833333333
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	1	6	35	2	2	1	in	0	0	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	2	6	55	1	2	0	in	0	0	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	4	8	15	2	2	1	in	0	0	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	5	8	50	3	2	0	in	0	0	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	6	9	30	1	2	0	in	0	0	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	7	10	0	2	2	1	in	0	0	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	8	10	35	1	2	0	in	1	point	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	12		25	ETPIP	M24	adul	1	man3	m3	rig	8870220	25	787	9	11	27	3	2	0	in	1	point	1	1	0	0	na	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	1	4	34	2	2	1	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	2	5	30	1	2	0	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	3	6	10	3	1	0	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	4	6	50	1	1	1	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	5	7	30	3	1	0	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	6	8	20	2	2	1	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	7	8	50	1	1	1	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	8	9	24	2	3	0	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	13		26	ETPIP	M24	peer	0	gir1	f1	lef	8819820	26	812	9	10	17	3	2	0	in	0	0	0	1	0	0	na	na	na	1	30	20	3	5	4	4	4	2	3	3,5
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	1	4	22	1	2	0	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	2	5	18	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	3	5	50	3	2	0	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	4	6	30	2	1	0	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	5	7	10	1	3	0	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	6	7	55	3	3	1	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	8	8	34	2	1	0	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	14	ET	25	ETPIP	M24	peer	0	gir1	f1	rig	8942868	25	778	9	9	13	3	3	1	in	0	0	0	1	1	1	5	na	na	1	40	40	3	4	4	4	2	4	4	3,833333333
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	1	3	50	2	2	1	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	2	4	30	1	2	0	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	3	5	5	3	3	1	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	4	5	40	2	1	0	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	5	6	16	1	1	1	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	6	6	50	3	3	1	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	7	7	25	2	2	1	in	0	0	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	8	8	5	1	1	1	in	1	att	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	15	ET	26	ETPIP	M24	peer	0	gir2	f2	lef	8858988	26	816	9	8	50	3	3	1	in	1	att	1	1	1	1	6	na	na	na	na	na	na	na	na	na	na	n5	na	na
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	1	4	0	3	3	1	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	2	4	50	2	3	0	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	3	5	18	1	2	0	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	5	6	50	1	2	0	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	6	7	34	3	1	0	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	7	8	30	1	1	1	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	8	9	14	3	1	0	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	16	ET	26	ETPIP	M24	peer	0	gir2	f2	rig	8904132	26	804	9	9	55	2	3	0	in	0	0	0	1	1	1	4	na	na	1	49	42	5	5	4	4	2	4	3	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	1	5	25	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	2	5	55	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	3	6	37	3	1	0	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	4	7	9	2	1	0	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	5	7	50	3	1	0	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	6	8	25	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	7	8	55	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	8	9	30	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	17	ET	26	ETPIP	M24	peer	0	gir3	f3	lef	8896752	26	797	9	9	55	1	2	0	in	0	0	0	1	0	0	na	na	na	1	40	40	4	5	5	4	3	3	4	4,166666667
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	1	6	33	3	2	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	2	7	10	1	2	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	3	7	45	2	1	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	4	8	24	1	2	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	5	9	0	3	2	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	6	9	40	2	1	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	7	10	25	1	2	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	18	ET	26	ETPIP	M24	peer	0	gir3	f3	rig	8912592	26	814	8	11	12	3	2	0	in	0	0	0	0	1	1	23	na	na	1	15	2	4	5	4	3	4	2	3	3,5
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	1	2	22	3	2	0	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	2	2	55	1	2	0	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	3	3	40	2	2	1	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	4	4	13	1	2	0	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	5	4	50	3	3	1	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	6	5	24	2	2	1	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	7	6	3	3	2	0	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	8	6	35	2	2	1	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	19		25	ETPIP	M24	adul	0	wom1	f1	lef	8891748	25	790	9	7	10	1	2	0	in	0	0	0	1	0	1	0.4	na	na	1	35	na	3	4	5	3	5	1	2	3
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	1	2	45	1	1	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	2	2	15	2	2	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	3	3	57	3	2	0	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	4	4	20	2	2	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	5	5	5	1	1	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	6	5	40	3	3	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	7	6	25	1	1	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	8	7	0	3	2	0	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	20		26	ETPIP	M24	adul	0	wom1	f1	rig	8908308	26	794	9	7	44	2	2	1	in	0	0	0	1	1	2	12	15	na	1	40	5	3	4	4	2	5	1	3	2,833333333
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	1	6	30	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	2	7	15	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	3	7	50	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	4	8	30	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	5	9	5	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	6	9	55	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	7	10	45	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	8	11	21	3	2	0	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	21		26	ETPIP	M24	adul	0	wom2	f2	lef	8895312	26	817	9	12	10	1	2	0	in	0	0	0	1	0	0	na	na	na	1	40	NA	5	5	2	5	3	3	4	4
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	1	7	45	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	3	8	12	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	4	8	55	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	5	9	20	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	6	10	0	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	7	10	33	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	8	11	10	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	22	ET	26	ETPIP	M24	adul	0	wom2	f2	rig	8936820	26	804	9	11	45	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	0	4	5	5	4	3	3	4	4,166666667
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	1	5	25	3	2	0	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	2	6	5	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	3	6	40	1	1	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	4	7	15	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	5	7	45	1	1	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	6	8	15	3	3	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	7	8	55	2	2	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	8	9	30	3	3	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	23		25	ETPIP	M24	adul	0	wom3	f3	lef	8932572	25	781	9	10	5	1	1	1	in	0	0	0	1	1	1	5	na	na	1	40	10	4	5	5	5	2	4	3	4,333333333
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	1	4	40	3	2	0	in	1	att	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	2	5	15	2	2	1	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	3	5	55	1	3	0	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	4	6	30	3	3	1	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	5	7	5	2	2	1	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	6	7	40	1	2	0	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	7	8	10	3	3	1	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	8	8	45	2	2	1	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	24	ET	27	ETPIP	M24	adul	0	wom3	f3	rig	8891568	27	823	9	9	20	1	1	1	in	0	0	1	1	0	0	na	na	na	1	35	0	3	5	5	4	3	3	5	4,166666667
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	1	4	0	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	2	4	40	1	1	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	3	5	13	3	3	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	4	5	50	1	1	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	5	6	29	3	3	1	in	1	point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	6	7	10	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	7	7	50	1	1	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	8	8	21	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	1	ET	37	ETPIP	M36	peer	1	boy1	m1	lef	8852796	37	1134	9	9	0	3	3	1	in	1	att&point	1	1	0	0	na	na	na	1	na	50	4	5	5	3	2	4	3	4
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	1	4	25	1	1	1	in	0	0	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	2	4	56	3	1	0	in	1	att&point	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	3	5	58	2	2	1	in	1	point	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	4	6	32	3	2	0	in	1	point	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	5	7	25	1	2	0	in	0	0	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	6	8	0	2	2	1	in	0	0	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	7	8	40	1	1	1	in	0	0	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	8	9	30	2	2	1	in	1	point	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	2	ET	37	ETPIP	M36	peer	1	boy1	m1	rig	8871480	37	1140	9	10	12	3	2	0	in	0	0	1	1	0	0	na	na	na	1	22	22	3	4	4	3	2	4	4	3,666666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	1	5	50	1	1	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	2	6	27	3	3	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	3	7	5	2	2	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	4	7	40	3	3	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	5	8	18	1	1	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	6	8	50	2	2	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	7	9	29	1	1	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	8	10	12	3	3	1	in	0	0	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	3		38	ETPIP	M36	peer	1	boy2	m2	lef	8773308	38	1181	9	10	50	2	2	1	in	1	att	1	1	1	1	8	na	na	1	na	35	2	4	4	4	4	2	3	3,166666667
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	1	4	15	1	2	0	in	0	0	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	2	4	45	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	3	5	26	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	4	5	55	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	5	6	30	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	6	7	0	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	7	7	33	1	1	1	in	1	point	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	8	8	22	2	2	1	in	1	point	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	4	ET	38	ETPIP	M36	peer	1	boy2	m2	rig	8831952	38	1157	9	9	5	3	3	1	in	1	point	1	1	0	0	na	na	na	1	na	45	3	5	4	3	3	3	3	3,5
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	1	4	50	3	2	0	in	0	0	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	2	5	25	1	1	1	in	0	0	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	3	6	0	2	2	1	in	1	att	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	4	6	40	1	1	1	in	1	att	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	5	7	10	2	2	1	in	0	0	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	6	7	44	3	3	1	in	0	0	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	7	8	24	1	1	1	in	0	0	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	8	9	5	2	2	1	in	0	0	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	5	ET	37	ETPIP	M36	peer	1	boy3	m3	lef	8918172	37	1138	9	9	50	3	3	1	in	1	point	1	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	1	4	45	3	3	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	2	5	18	2	2	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	3	5	45	1	1	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	4	6	22	3	3	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	5	7	6	1	1	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	6	7	38	2	2	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	7	8	10	3	3	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	8	8	54	2	2	1	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	6		37	ETPIP	M36	peer	1	boy3	m3	rig	8867700	37	1152	9	9	28	1	2	0	in	0	0	0	1	0	1	0,5	na	na	1	na	35	3	5	5	4	5	1	2	3,333333333
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	1	4	18	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	2	4	53	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	3	5	25	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	4	6	0	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	5	6	32	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	6	7	0	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	7	7	46	1	1	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	8	8	35	3	3	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	7	ET	38	ETPIP	M36	adul	1	man1	m1	lef	8752680	38	1180	9	9	5	2	2	1	in	0	0	0	1	0	0	na	na	na	1	40	45	2	4	3	3	4	2	2	2,666666667
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	1	3	46	2	2	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	2	4	24	3	3	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	3	4	58	1	1	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	4	5	28	2	2	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	5	6	5	3	3	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	6	6	39	1	1	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	7	7	16	3	3	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	8	7	45	1	1	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	8	ET	37	ETPIP	M36	adul	1	man1	m1	rig	8784936	37	1152	9	8	24	2	2	1	in	0	0	0	1	1	1	3	8	na	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	1	5	35	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	2	6	10	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	3	6	48	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	4	7	23	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	5	8	0	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	6	8	30	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	7	9	0	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	8	9	46	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	9	ET	38	ETPIP	M36	adul	1	man2	m2	lef	8725320	38	1172	9	10	25	2	1	0	in	0	0	0	1	0	1	1	na	na	1	na	35	4	5	4	2	3	3	4	3,666666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	1	1	25	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	2	2	0	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	3	2	34	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	4	3	5	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	5	3	37	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	6	4	24	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	7	4	49	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	8	5	20	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	10	ET	38	ETPIP	M36	adul	1	man2	m2	rig	8720640	38	1183	9	6	0	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	40	4	5	4	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	1	4	10	2	2	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	2	4	46	1	1	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	3	5	10	3	3	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	4	5	45	2	2	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	5	6	20	3	3	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	6	6	55	1	1	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	7	7	35	2	2	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	8	8	3	1	1	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	11	ET	37	ETPIP	M36	adul	1	man3	m3	lef	8918208	37	1138	9	8	36	3	3	1	in	0	0	0	1	1	1	3	na	na	1	na	80	4	4	5	4	2	4	4	4,166666667
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	1	3	58	2	2	1	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	2	4	34	1	2	0	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	3	5	15	3	3	1	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	4	5	44	2	2	1	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	5	6	15	3	2	0	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	6	6	47	1	1	1	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	7	7	23	2	2	1	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	8	7	59	1	2	0	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	12	ET	38	ETPIP	M36	adul	1	man3	m3	rig	8819424	38	1163	9	8	37	3	2	0	in	0	0	0	1	1	1	4	na	na	1	na	60	4	4	3	4	3	3	3	3,5
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	1	3	48	2	2	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	2	4	34	1	2	0	in	1	att	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	3	5	20	3	3	1	in	1	point	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	4	5	45	1	1	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	5	6	15	3	3	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	6	6	45	2	2	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	7	7	23	1	1	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	8	7	55	2	2	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	13	ET	38	ETPIP	M36	peer	0	gir1	f1	lef	8752356	38	1176	9	8	30	3	3	1	in	0	0	1	1	0	1	0,3	na	na	1	na	35	3	5	4	4	3	3	4	3,833333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	1	7	15	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	2	7	50	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	3	8	25	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	4	8	55	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	5	9	26	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	6	9	55	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	7	10	25	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	8	10	59	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	14		37	ETPIP	M36	peer	0	gir1	f1	rig	8842572	37	1150	9	11	35	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	40	3	4	2	2	4	2	1	2,333333333
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	1	5	23	2	2	1	in	1	att	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	2	5	55	1	1	1	in	1	att	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	3	6	28	3	3	1	in	1	att&point	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	4	7	1	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	5	7	35	1	1	1	in	1	att	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	6	8	8	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	7	8	44	2	2	1	in	1	att&point	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	8	9	15	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	15		37	ETPIP	M36	peer	0	gir2	f2	lef	8818308	37	1140	9	9	50	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	45	4	4	5	4	2	4	4	4,166666667
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	1	4	13	1	2	0	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	2	4	57	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	3	5	26	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	4	5	57	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	5	6	29	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	6	7	5	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	7	7	34	1	1	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	8	8	5	3	3	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	16	ET	38	ETPIP	M36	peer	0	gir2	f2	rig	8748540	38	1181	9	8	40	2	2	1	in	0	0	0	1	0	1	1	na	na	1	na	50	5	5	4	4	3	3	5	4,333333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	1	4	40	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	2	5	28	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	3	6	0	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	4	6	40	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	5	7	15	3	3	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	6	7	55	1	1	1	in	1	point	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	7	8	40	2	2	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	8	9	20	3	2	0	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	17		38	ETPIP	M36	peer	0	gir3	f3	lef	8725068	38	1162	9	10	40	1	1	1	in	0	0	1	1	0	0	na	na	na	1	na	40	4	4	5	3	3	3	4	3,833333333
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	1	3	59	3	3	1	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	2	5	5	1	3	0	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	3	5	6	2	2	1	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	4	5	35	1	2	0	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	5	6	15	3	2	0	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	6	6	50	2	2	1	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	7	7	20	1	3	0	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	8	8	0	3	3	1	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	18	ET	38	ETPIP	M36	peer	0	gir3	f3	rig	8904024	38	1160	9	8	35	2	3	0	in	0	0	0	1	1	2	5	1	na	1	na	42	3	4	5	4	3	3	3	3,666666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	1	4	25	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	2	4	55	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	3	5	34	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	4	6	15	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	5	6	39	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	6	7	13	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	7	7	55	3	3	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	8	8	35	2	2	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	19		38	ETPIP	M36	adul	0	wom1	f1	lef	8791488	38	1177	9	9	5	1	1	1	in	0	0	0	1	1	1	6	na	na	1	na	35	3	5	5	4	2	4	4	4,166666667
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	2	5	53	2	2	1	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	3	6	40	3	3	1	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	4	7	20	2	2	1	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	5	7	53	1	1	1	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	6	8	25	3	3	1	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	7	8	55	1	1	1	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	8	9	33	3	2	0	in	0	0	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	20	ET	38	ETPIP	M36	adul	0	wom1	f1	rig	8870544	38	1155	9	10	5	2	2	1	in	1	att	1	1	1	3	5	7	9	1	na	30	4	5	4	4	3	3	3	3,833333333
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	1	7	9	1	1	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	2	7	30	2	2	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	3	8	4	3	3	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	4	8	35	2	2	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	5	9	5	3	3	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	6	9	41	1	1	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	7	10	22	2	2	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	8	10	45	3	3	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	21		38	ETPIP	M36	adul	0	wom2	f2	lef	8821440	38	1157	9	11	21	1	1	1	in	0	0	0	1	0	1	0,5	na	na	1	na	30	4	5	5	3	2	4	4	4,166666667
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	1	3	50	3	3	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	2	4	30	2	2	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	3	4	55	1	1	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	4	5	23	3	3	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	5	6	5	2	3	0	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	6	6	37	1	1	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	7	7	10	3	3	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	8	7	40	2	2	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	22		37	ETPIP	M36	adul	0	wom3	f3	rig	8879148	37	1149	9	8	24	1	1	1	in	0	0	0	1	1	1	5	na	na	1	na	84	4	4	4	4	2	4	3	3,833333333
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	1	5	40	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	2	6	17	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	3	6	50	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	4	7	24	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	5	7	55	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	6	8	30	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	7	9	4	2	2	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	8	9	40	3	3	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	23	ET	38	ETPIP	M36	adul	0	wom3	f3	lef	8750052	38	1176	9	10	12	1	1	1	in	0	0	0	1	0	0	na	na	na	1	na	20	4	5	4	5	3	3	3	4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	1	7	1	1	1	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	2	7	50	3	3	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	3	8	19	2	2	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	4	9	0	3	3	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	5	9	28	2	2	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	6	10	0	1	1	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	7	10	33	3	3	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	8	11	12	2	2	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
+0	24		37	ETPIP	M36	adul	0	wom2	f2	rig	8819604	37	1139	9	12	0	1	1	1	in	0	0	0	1	1	1	1	3	na	1	na	40	4	na	3	2	2	4	4	3,4
